@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Ký Học Viên</title>
+    <style>
+        #dangky{
+            color: blue;
+        }
+        .mauxanh{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<form style="background-color: gold">
+
+    <table >
+        <tr>
+            <th style="background-color: aquamarine" id="dangky" align="left" colspan="2"><b> Đăng Ký Học Viên</b></td>
+        </tr>
+        <tr>
+            <td class="mauxanh"> Họ và Tên</td>
+            <td> <input type="text" name="hovaten" placeholder="Your name"> </td>
+        </tr>
+        <tr>
+            <td class="mauxanh"> Ngày Sinh</td>
+            <td><input type="date" name="ngaysinh" placeholder="date of birth"> </td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Giới Tính</td>
+            <td colspan="2"> <input type="radio" name="gender"> Nam
+            <input type="radio" name="gender">Nữ </td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Địa Chỉ</td>
+            <td><textarea> </textarea></td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Lớp</td>
+            <td>
+                <select>
+                    <option>-Chọn-Lớp-</option>
+                    <option>Lớp A</option>
+                    <option> Lớp B</option>
+                    <option> Lớp C</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Email</td>
+            <td><input type="email" name="emailaddress"></td>
+        </tr>
+        <tr>
+            <td class="mauxanh">Điện Thoại</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr><td></td>
+            <td><input type="submit" name="dangky" value="Đăng Ký">
+            <input type="reset" name="nhaplai" value="Nhập Lại"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
