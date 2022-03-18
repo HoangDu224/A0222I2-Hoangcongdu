@@ -1,0 +1,6 @@
+
+function showMessage() {
+    alert('Xinchao');
+
+}
+

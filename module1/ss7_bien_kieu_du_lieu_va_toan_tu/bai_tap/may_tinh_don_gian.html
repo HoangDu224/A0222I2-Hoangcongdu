@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh don gian</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<input type="text" id="so1" >
+<input type="text" id="so2" ><br>
+<input onclick="phepcong()" type="button" value="Addition(+)">
+<input onclick="pheptru()" type="button" value="Subtraction(-)">
+<input onclick="phepnhan()" type="button" value="multiplication(x)">
+<input onclick="phepchia()" type="button" value="Division(/)"><br>
+<span id="ketqua"> Result Division:</span>
+<script>
+    function phepcong() {
+    let nhapso1 =    document.getElementById('so1').value
+        nhapso2 = document.getElementById('so2').value
+        soo1 = parseInt(nhapso1)
+        soo2 = parseInt(nhapso2)
+        result = soo1+soo2
+        document.getElementById('ketqua').innerHTML=('Result Division:'+result)
+    }
+    function pheptru() {
+        let nhapso1 =    document.getElementById('so1').value
+        nhapso2 = document.getElementById('so2').value
+        soo1 = parseInt(nhapso1)
+        soo2 = parseInt(nhapso2)
+        result = soo1-soo2
+        document.getElementById('ketqua').innerHTML=('Result Division:'+result)
+    }
+    function phepnhan() {
+        let nhapso1 =    document.getElementById('so1').value
+        nhapso2 = document.getElementById('so2').value
+        soo1 = parseInt(nhapso1)
+        soo2 = parseInt(nhapso2)
+        result = soo1*soo2
+        document.getElementById('ketqua').innerHTML=('Result Division:'+result)
+    }
+    function phepchia() {
+        let nhapso1 = document.getElementById('so1').value
+        nhapso2 = document.getElementById('so2').value
+        soo1 = parseInt(nhapso1)
+        soo2 = parseInt(nhapso2)
+        result = soo1 / soo2
+        document.getElementById('ketqua').innerHTML = ('Result Division:' + result)
+    }
+</script>
+</body>
+</html>

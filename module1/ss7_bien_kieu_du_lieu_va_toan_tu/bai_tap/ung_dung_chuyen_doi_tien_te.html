@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table  width="700" height="10">
+    <tr>
+        <th>Amount</th>
+        <th>From currency</th>
+        <th>To currency</th>
+        <th></th>
+    </tr>
+    <tr align="center">
+        <td> <input type="text" id="11" ></td>
+        <td> <select style="width: 100px">
+            <option>Việt Nam</option>
+            <option>campuchia</option>
+            <option>lao</option>
+            <option>thai lan</option>
+            <option>My</option>
+        </select></td>
+        <td> <select>
+            <option>USD</option>
+            <option>VND</option>
+        </select></td>
+        <td><input type="button" value="convert" onclick="convert()"> </td>
+    </tr>
+    <tr>
+        <td >
+            <span id="giatri"> Result:</span>
+        </td>
+    </tr>
+</table>
+<script>
+    function convert(){
+     let inputamount = document.getElementById('11').value
+        amount = parseInt(inputamount)
+        result=amount/23000
+        document.getElementById('giatri').innerHTML=('Result:'+result)
+    }
+    </script>
+
+</body>
+</html>
