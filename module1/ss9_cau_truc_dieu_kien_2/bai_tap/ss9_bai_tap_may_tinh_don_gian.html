@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <title>Title</title>
+    <style>
+        input { color: blue}
+    </style>
+</head>
+<body>
+<table border="10">
+    <tr>
+        <th style="color: blue" height="25" id="hienthi" align="right"></th>
+    </tr>
+    <tr>
+        <td>
+          <table style="text-align: center" cellpadding="10px">
+    <tr >
+        <td><input onclick="caculator(1)" type="button" value="1"></td>
+        <td><input onclick="caculator(2)" type="button" value="2"></td>
+        <td><input onclick="caculator(3)" type="button" value="3"></td>
+        <td><input onclick="caculator('+')" type="button" value="+"></td>
+    </tr>
+    <tr>
+        <td><input onclick="caculator(4)" type="button" value="4"></td>
+        <td><input onclick="caculator(5)" type="button" value="5"></td>
+        <td><input onclick="caculator(6)" type="button" value="6"></td>
+        <td><input onclick="caculator('-')" type="button" value="-"></td>
+    </tr>
+    <tr>
+        <td><input onclick="caculator(7)" type="button" value="7"></td>
+        <td><input onclick="caculator(8)" type="button" value="8"></td>
+        <td><input onclick="caculator(9)" type="button" value="9"></td>
+        <td><input onclick="caculator('*')" type="button" value="x"></td>
+    </tr>
+    <tr>
+        <td><input onclick="reset()" type="button" value="C"></td>
+        <td><input onclick="caculator(0)" type="button" value="0"></td>
+        <td><input onclick="tinh('=')" type="button" value="="></td>
+        <td><input onclick="caculator('/')" type="button" value="/"></td>
+    </tr>
+          </table> </td>
+    </tr>
+</table>
+<script>
+    let str = " ";
+    function caculator(number) {
+        str += number;
+        document.getElementById("hienthi").innerHTML = str;
+    }
+    function tinh() {
+        let result = parseInt(eval(document.getElementById("hienthi").innerHTML));
+        document.getElementById("hienthi").innerHTML = result;
+    }
+    function reset() {
+        str = "";
+        document.getElementById("hienthi").innerHTML = str;
+    }
+
+</script>
+</body>
+</html>

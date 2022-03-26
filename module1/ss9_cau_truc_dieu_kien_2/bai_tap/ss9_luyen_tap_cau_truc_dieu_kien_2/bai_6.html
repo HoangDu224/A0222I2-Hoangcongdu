@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <span>a= <input type="text" id="soa" ></span><br>
+ <span>b= <input type="text" id="sob"></span><br>
+ <input  type="button" value="ketqua" onclick="ketqua()"><br>
+ <span id="result"></span>
+<script>
+    function ketqua() {
+        let a= parseInt(document.getElementById('soa').value)
+        let b= parseInt(document.getElementById('sob').value)
+       // a*x + b = 0
+      if (a==0){
+          if (b==0){
+              document.getElementById('result').innerHTML=('Phuong trinh co vo so nghiem')
+          } else {
+              document.getElementById('result').innerHTML=('Phuong trinh vo nghiem')
+          }
+      }else {
+          let x = -b/a
+          document.getElementById('result').innerHTML=('X='+x)
+      }
+    }
+</script>
+
+</body>
+</html>

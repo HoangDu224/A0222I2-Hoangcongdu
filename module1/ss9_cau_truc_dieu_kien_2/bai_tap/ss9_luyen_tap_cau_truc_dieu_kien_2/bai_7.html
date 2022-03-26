@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span id="dong0"></span><br>
+<span id="dong1"></span><br>
+<span id="dong2"></span>
+<script>
+    let a = parseInt(prompt('Nhap so a'))
+    let b = parseInt(prompt('Nhap so b'))
+    let c = parseInt(prompt('Nhap so c'))
+        d = b*b-4*a*c
+      if  (d>0) {
+        x1=(-b+ Math.sqrt(d))/2*a
+        x2=(-b- Math.sqrt(d))/2*a
+        document.getElementById('dong0').innerHTML=('Phuong trinh co 2 nghiem')
+        document.getElementById('dong1').innerHTML=('x1 = '+x1)
+        document.getElementById('dong2').innerHTML=('x2 = '+x2)
+      }else if (d<0){
+        document.write('Phuong trinh vo nghiem')
+            }else {
+            x1=x2=-b/2*a
+            document.write('Phuong trinh co nghiem kep x1=x2= '+x1)
+      }
+</script>
+</body>
+</html>

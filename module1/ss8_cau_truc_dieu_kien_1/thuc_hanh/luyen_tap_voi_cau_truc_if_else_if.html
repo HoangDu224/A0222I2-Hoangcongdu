@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhap tai khoan')
+    if (a=='admin'){
+       b= prompt('Nhap mat khau')
+        if(b=='themaster'){
+            document.write('welcom')
+        }else if(b=='null'){
+            document.write('Canceled')
+        }else {
+            document.write('Wrong password. ')
+        }
+    }else if(a=='null'){
+        document.write('Canceled')
+    }else {
+        document.write('I don’t know you')
+    }
+</script>
+
+</body>
+</html>

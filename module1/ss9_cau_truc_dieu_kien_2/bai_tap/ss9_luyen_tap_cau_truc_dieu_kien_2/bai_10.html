@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_10</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhap so kWh '))
+    let b = " ";
+    if (a<=50 && a>0){
+        b = 1678
+    }else if (a<100){
+        b = 1734
+    }else if (a<200){
+        b = 2014
+    }else if (a<300){
+        b = 2536
+    }else if (a<400){
+        b = 2834
+    }else if(a>=400)
+    {
+        b = 2927
+    }
+    c=a*b
+    document.write(c+ ' VND')
+
+</script>
+
+</body>
+</html>
