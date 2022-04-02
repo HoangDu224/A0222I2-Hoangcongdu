@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<input type="button" value="Add" onclick="add()">
+<input type="button" value="Reverse" onclick="reverse()">
+<div id="result"></div>
+<div id="result2"></div>
+<script>
+    let array = []
+    let x = 0
+    function add(){
+        array [x] = document.getElementById('nhap').value
+        document.getElementById('result').innerHTML=("Array: "+array)
+        document.getElementById('nhap').value="";
+        x++
+    }
+    function reverse(){
+        dao = array.reverse()
+        document.getElementById('result2').innerHTML= ("Reverse: "+dao)
+    }
+</script>
+</body>
+</html>

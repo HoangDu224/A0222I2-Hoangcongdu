@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt(" nhap so gioi han tren"))
+    b = parseInt(prompt(" nhap so gioi han duoi"))
+    count = 0
+    d= Math.floor(Math.random()*(a-b+1)+b)
+    do { c= parseInt(prompt("Moi doan so"))
+        if (c===d){
+            alert(" Chuc mung ban da doan dung")
+            break;
+        }else if (c>d){
+            alert("Doan thap hon di")
+            count++
+        }else if(c<d){
+            alert("Doan cao hon di")
+            count++
+        }
+        if(count>=3){
+            alert("het luot doan")
+            break;
+        }
+
+    }while(true)
+</script>
+
+</body>
+</html>

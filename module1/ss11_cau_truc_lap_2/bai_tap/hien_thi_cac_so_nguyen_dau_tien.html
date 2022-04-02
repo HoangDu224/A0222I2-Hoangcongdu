@@ -9,9 +9,21 @@
     let a = parseInt(prompt('Nhap so nguyen to'))
     count = 0
     n=2
-    for( n; n<=20;n++) {
-
-    }
+    while(count<=a-2){
+        for (i=1;i<n;i++){
+            if (n<2){
+                n++
+            }else if(n==2){
+                n++
+                document.write("2 ")
+            }else if(n%2==0){
+                n++
+            }else if (n%i==0){
+                    n++
+                }
+            }document.write(n+" ")
+        count++
+        }
 
 </script>
 

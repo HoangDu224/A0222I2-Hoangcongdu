@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=parseInt(prompt("chieu rong"))
+        b = parseInt(prompt("chieu dai"))
+    for(row=1;row<=a;row++) {
+        for (col=1;col<=b;col++) {
+            if (row===1 || row===a ){
+                document.write(" * ")
+            }else if (col>=2) {
+                document.write("&nbsp&nbsp"+" ")
+                if (col === b) {
+                    document.write(" * ")
+                }
+            } else {
+                document.write(" * ")
+            }
+        }
+        document.write("<br>")
+    }
+
+</script>
+
+</body>
+</html>
