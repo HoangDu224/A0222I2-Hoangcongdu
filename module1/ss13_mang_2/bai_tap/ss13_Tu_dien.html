@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapvao">
+<input type="button" value="Search" onclick="search()">
+<div id="result"></div>
+<script>
+    let array1 = ["Hello","Year","month","day","goodbye"]
+    let array2 = ["xin chao","Nam","Thang","Ngay","Tam biet"]
+    function search(){
+        let keyword = document.getElementById('nhapvao').value
+        for (i = 0;i<array1.length;i++){
+            if (array1[i]===keyword){
+                document.getElementById("result").innerHTML=("Dịch: "+array2[i])
+                break;
+            }else{
+                document.getElementById("result").innerHTML=("Không tìm thấy trong từ điển")
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
