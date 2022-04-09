@@ -6,16 +6,19 @@
 </head>
 <body>
 <script>
-    let str = [2,11,23,3,4,8,9,45,99,101]
-    let max = str[0]
+    let array = []
+    for (i=0 ;i<10;i++){
+        array[i]= parseInt(prompt(" "))
+    }
     let count = 0
-    for (let x = 0 ; x<str.length ; x++){
-        if (str[x]>max){
-            max = str[x]
-            count=x
-        }
-    }document.write("Gia tri lon nhat trong mang: "+max)
-    document.write("<br>"+"Vi tri "+count)
+     let max = array[0]
+     for (let x = 0 ; x<array.length ; x++){
+         if (array[x]>max){
+            max = array[x]
+             count=x
+         }
+     }document.write("Gia tri lon nhat trong mang: "+max)
+     document.write("<br>"+"Vi tri "+count)
 </script>
 
 </body>

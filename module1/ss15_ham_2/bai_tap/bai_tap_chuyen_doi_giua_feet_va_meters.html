@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function feettometer(feet) {
+        meter=0.305 * feet
+        return meter
+    }
+    function metertofeet(meter) {
+        feet=3.279 * meter
+        return feet
+    }
+    let a = feettometer(parseInt(prompt("Nhap feet de chuyen sang meter")))
+    let b = metertofeet(parseInt(prompt("Nhap meter de chuyen sang feet")))
+
+
+    document.write(a+" meter"+"<br>")
+    document.write(b+" feet")
+</script>
+</body>
+</html>

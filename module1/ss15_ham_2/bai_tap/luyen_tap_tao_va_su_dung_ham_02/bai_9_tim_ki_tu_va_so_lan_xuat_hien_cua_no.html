@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input" >
+<button onclick="search()">Search</button>
+<div id="result"></div>
+<script>
+    let array = []
+        array[0]=prompt("Nhap ky tu muon truyen")
+     function search() {
+         let b = document.getElementById('input').value
+         let c = (array[0].split(b).length-1)
+         document.getElementById('result').innerHTML=("Ki tu "+b+" xuat hien "+c+" lan")
+         if (c<=0){
+             document.getElementById('result').innerHTML=-1
+         }
+     }
+</script>
+</body>
+</html>

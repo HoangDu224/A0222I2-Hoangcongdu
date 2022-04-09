@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function giaithua(a) {
+    if (a===1){
+        document.write(1)
+    }
+    n1 = a-1
+    sum = 0
+    n2 = a
+    for (count=0;count<a-2;count++) {
+        total = n2 * n1
+        n1--
+        n2 = total
+
+    }
+        document.write(total)
+    }
+    let inputnum = parseInt(prompt("Nhap so nguyen duong can tinh giai thua"))
+     giaithua(inputnum)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = []
+    function dao(a) {
+        a.reverse()
+        return a
+    }
+    let numin = parseInt(prompt("Muon truyen vao bao nhieu so?"))
+    for (i=0;i<numin;i++){
+        a[i]= parseInt(prompt("Nhap so muon truyen"))
+    }
+    document.write(a+"<br>")
+    document.write(dao(a))
+</script>
+
+</body>
+</html>

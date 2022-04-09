@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function snt(inputnum) {
+        if (inputnum<=0 || inputnum===1){
+            return false
+        }else if(inputnum===2){
+            return true
+        }else if (inputnum%2===0){
+            return false
+        }else if (inputnum%3===0){
+            return false
+        }else {
+            return true
+        }
+    }
+    for (i=0;i<=10000;i++){
+            if (snt(i)===true){
+                document.write(i+"<br>")
+            }
+    }
+
+    let inputnum= parseInt(prompt("Nhap so nguyen bat ki "))
+    if (snt(inputnum)){
+        alert(inputnum+" La so nguuyen to")
+    }else if (inputnum===2) {
+        alert(inputnum + " La so nguuyen to")
+    }else {
+        alert(inputnum+" Khong phai la so nguyen to")
+    }
+
+</script>
+
+</body>
+</html>
