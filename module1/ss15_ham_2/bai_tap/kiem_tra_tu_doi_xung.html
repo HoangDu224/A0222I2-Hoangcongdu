@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra tu doi xung</title>
+</head>
+<body>
+<script>
+  let strin = prompt("Nhap tu can check")
+  function reverse(array){
+      a = array.split("").reverse().join("")
+      return a
+  }
+   function check(str){
+       let flag = false
+       if (str===reverse(strin)){
+           flag = true
+       }
+       return flag
+  }
+  c = check(strin)
+  document.write(c)
+
+
+</script>
+</body>
+</html>
