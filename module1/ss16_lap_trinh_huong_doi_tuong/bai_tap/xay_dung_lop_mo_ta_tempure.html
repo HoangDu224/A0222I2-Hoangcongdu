@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(doC) {
+            this.doC= doC
+        }
+        CsangF(){
+            return this.doC*33.8
+        }
+        CsangK(){
+            return this.doC*273.15
+        }
+    }
+    let Ctoday= new Temperature(25)
+    let F = Ctoday.CsangF()
+    let K = Ctoday.CsangK()
+    document.write("F= "+F+"<br>K= "+K)
+</script>
+</body>
+</html>

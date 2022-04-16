@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="700" height="500" style="border: 3px solid #d3d3d3;" ></canvas><br>
+<button onclick="change()">Thay đổi kích thước hình chữ nhật</button>
+<select id="select">
+  <option style="background-color: red" onclick="color()" id="red" >red</option>
+  <option style="background-color: blue" onclick="color()" id="blue" >blue</option>
+  <option style="background-color: greenyellow" onclick="color()" id="green">green</option>
+</select> <br>
+<div id="dientich">Diện tích hình chữ nhật</div>
+<div id="chuvi">Chu vi hình chữ nhật</div>
+<script>
+  class HinhCN{
+    constructor(width,height){
+      this.width= width
+      this.height= height
+    }
+    Dientich(){
+      return this.height*this.width
+    }
+    Chuvi(){
+      return (this.width+this.height)*2
+    }
+    createimg(){
+      let canvas = document.getElementById('myCanvas')
+      let ctx = canvas.getContext('2d')
+      ctx.clearRect(0,0,700,500)
+      ctx.fillStyle= document.getElementById('select').value
+      ctx.fillRect(10,10,this.width,this.height)}
+  }
+
+  let Rectangle = new HinhCN(200,100)
+  let dientich = Rectangle.Dientich()
+  let chuvi = Rectangle.Chuvi()
+  Rectangle.createimg()
+  document.getElementById('dientich').innerHTML=("Diện tích hình chữ nhật: "+dientich)
+  document.getElementById('chuvi').innerHTML=("Chu vi hình chữ nhật: "+chuvi)
+
+  function change(){
+    let newWidth = parseInt(prompt("Nhap chieu dai"))
+    let newHeight = parseInt(prompt("Nhap chieu rong"))
+    let newRectangle = new HinhCN(newWidth,newHeight)
+    let dientich = newRectangle.Dientich()
+    let chuvi = newRectangle.Chuvi()
+    newRectangle.createimg()
+    document.getElementById('dientich').innerHTML=("Diện tích hình chữ nhật: "+dientich)
+    document.getElementById('chuvi').innerHTML=("Chu vi hình chữ nhật: "+chuvi)
+  }
+</script>
+</body>
+</html>

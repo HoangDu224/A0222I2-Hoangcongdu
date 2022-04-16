@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{background-color: chartreuse;color: white}
+    </style>
+</head>
+<body>
+<h3> Add new product</h3>
+<input type="text" id="add" placeholder="New product">
+<button onclick="add()" > Add</button>
+<h4>Display all product</h4>
+<p id="display"></p>
+</table>
+<script>
+    let productList = ["Sony","Samsum Galaxy","Nokia 6","Xiaomi redmi note 4","Apple Iphone 6s","Xiaomi 5s plus"];
+    display(productList);
+    function display(list) {
+        let tableString = '<table style="border-collapse: collapse" width="500"> ' +
+            '<tr>' +
+            '<th align="left">Product name</th>' +
+            '<th colspan="2" id="soLuong" align="right"></th>' +
+            '<th></th>' +
+            '</tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>' +
+                '<td>' + list[i] + '</td>\n' +
+                '<td><button type="button" onclick="edit('+i+')">Edit</td>\n' +
+                '<td><button type="button" onclick="deleteProduct('+i+')">Delete</td>\n' +
+                '</tr>';
+        }
+        tableString += '</table>'
+        document.getElementById("display").innerHTML = tableString;
+        document.getElementById("soLuong").innerText = list.length;
+    }
+    function add() {
+        let newProduct = document.getElementById('add').value
+        if (newProduct != "") {
+            productList.push(newProduct);
+        } else {
+            alert("Bạn cần phải nhập thông tin sản phầm");
+        }
+        display(productList);
+        document.getElementById("product").value = "";
+    }
+    function deleteProduct(index) {
+        let conf = confirm("Bạn có muốn xóa sản phẩm "+ productList[index])
+        if (conf){
+            productList.splice(index,1);
+        }
+        display(productList);
+
+    }
+    function edit(index) {
+        let editname = prompt("Nhap ten muon sua")
+        productList[index]=editname
+        display(productList)
+    }
+</script>
+</body>
+</html>

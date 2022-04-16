@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class date {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        getDay() {
+            return  this.day
+        }
+
+        getMonth() {
+            return  this.month
+        }
+
+        getYear() {
+             return  this.year
+        }
+    }
+
+    let Today = new date(1, 12, 2011);
+    let day = Today.getDay();
+    let month = Today.getMonth();
+    let year = Today.getYear();
+    alert(day + "/" + month + "/" + year);
+
+    let setday= confirm("Ban co muon thay doi ngay thang nam")
+    if (setday){
+        a =[prompt("Nhap Ngay")]
+        b =[prompt("Nhap Thang")]
+        c =[prompt("Nhap Nam")]
+        newDay = new date(a,b,c);
+        day= newDay.getDay()
+        month = newDay.getMonth()
+        year = newDay.getYear()
+        alert(day + "/" + month + "/" + year);
+    }
+
+</script>
+</body>
+</html>
