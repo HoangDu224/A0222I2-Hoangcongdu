@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class ElectricLamp{
+        constructor() {
+            this.status = true
+        }
+        turnoff(){
+            document.write("Turn off<br>")
+        }
+        turnon(){
+            document.write("Turn on<br>")
+        }
+    }
+    class SwitchButton{
+        constructor(boonlean,lamp) {
+            this.boonlean = boonlean
+            this.lamp = lamp
+        }
+        swithchOn(){
+            this.boonlean = true
+            this.lamp.turnon()
+        }
+        switchOff(){
+            this.boonlean = false
+            this.lamp.turnoff()
+        }
+        switchButton(){
+            if (this.boonlean===true){
+                this.boonlean = false
+                this.lamp.turnoff()
+            }else if (this.boonlean===false){
+                this.boonlean = true
+                this.lamp.turnon()
+            }
+        }
+    }
+    let Den1 = new ElectricLamp()
+    let Congtac1 = new SwitchButton(false,Den1)
+    for (let i = 0 ; i<10 ;i++){
+        Congtac1.switchButton()
+    }
+</script>
+</body>
+</html>

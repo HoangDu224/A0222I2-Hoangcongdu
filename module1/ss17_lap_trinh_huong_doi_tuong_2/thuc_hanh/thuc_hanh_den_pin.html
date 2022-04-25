@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Den pin</title>
+</head>
+<body>
+<script>
+
+    class FlashLamp{
+        constructor(battery) {
+            this.on = true
+            this.battery= battery
+        }
+        getEnergy(){
+            document.write(this.battery)
+        }
+        setEnergy(newenergy){
+            return this.battery = newenergy
+        }
+        decreaseEnergy(){
+            return this.battery--
+        }
+        turnOn(){
+            this.on = true
+            this.battery--
+        }
+        turnOff(){
+            this.on = false
+        }
+        checkStatus(){
+            if (this.on){
+                alert("Lightning")
+            }else {
+                alert("Not Lightning")
+            }
+        }
+    }
+    let Light = new FlashLamp(100)
+
+    Light.turnOn()
+    Light.getEnergy()
+</script>
+</body>
+</html>

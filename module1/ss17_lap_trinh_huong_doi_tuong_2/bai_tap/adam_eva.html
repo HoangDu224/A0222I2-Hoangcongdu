@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10
+        }
+        decrease(){
+            if (this.weight>0){
+                this.weight--;
+            }
+        }
+        isEmpty(){
+            if (this.weight===0){
+                return true;
+            }
+            return false
+        }
+        getWeight(){
+            return this.weight
+        }
+    }
+    class Human {
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight ;
+        }
+        isMale(){
+            if (this.gender==="NAM"){
+                return true
+            }
+            return false
+        }
+        setGender(newGender){
+            return this.gender = newGender
+        }
+        checkApple(apple){
+            if (apple.isEmpty()){
+                console.log("Tao da het")
+                return false
+            }else {
+                console.log("Tao van con")
+                return true
+            }
+        }
+        eat(apple){
+            if (this.checkApple(apple)){
+                apple.decrease();
+                this.weight++;
+            }
+        }
+        say(message){
+            console.log(this.name+":"+message)
+        }
+        setName(name){
+            this.name = name
+        }
+        setName(){
+            return this.name
+        }
+        getWeight(){
+            return this.weight
+        }
+        setWeight(weight){
+            this.weight = weight
+        }
+    }
+    let Adam = new Human('Adam','NAM',50)
+    let Eva = new Human('Eva','NU',40)
+    let Tao1 = new Apple()
+    Adam.say("Ăn táo đi bro")
+    Eva.say("Ok bro")
+    Adam.eat(Tao1)
+    Adam.eat(Tao1)
+    Adam.eat(Tao1)
+    Eva.eat(Tao1)
+    Eva.eat(Tao1)
+    Eva.eat(Tao1)
+    Eva.eat(Tao1)
+    Eva.eat(Tao1)
+    Eva.eat(Tao1)
+    Eva.eat(Tao1)
+    Eva.eat(Tao1)
+    Eva.eat(Tao1)
+    console.log("Eva weight: "+Eva.getWeight())
+    console.log("Adam weight: "+Adam.getWeight())
+    console.log("Tao weight:"+Tao1.getWeight())
+    console.log("Check apple:"+Adam.checkApple(Tao1))
+</script>
+</body>
+</html>

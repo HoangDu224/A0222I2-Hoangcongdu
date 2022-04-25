@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    function Hero(image, top, left,bottom, size){
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+        this.bottom = bottom;
+
+        this.getHeroElement = function(){
+            return '<img width="'+ this.size + '"' +
+                ' height="'+ this.size + '"' +
+                ' src="' + this.image +'"' +
+                ' style="top: '+this.top+'px;' +
+                'left:'+this.left+'px;' +
+                'position:absolute;" />';
+        }
+
+        this.moveRight = function(){
+            this.left += 20;
+            console.log('ok left: ' + this.left);
+        }
+        this.moveBottom = function (){
+            this.top += 20;
+            console.log('ok top: ' + this.top);
+        }
+        this.moveLeft = function () {
+            this.left -= 20;
+            console.log('ok leftlui: '+this.left);
+        }
+        this.moveUp = function () {
+            this.top -= 20
+            console.log('ok Di len: '+this.top);
+
+        }
+    }
+
+    var hero = new Hero('pikachu.png',20,20,20,200);
+    function start(){
+        if(hero.left < window.innerWidth - hero.size && hero.top===20){
+            hero.moveRight()
+        }else if (hero.top < window.innerWidth - hero.size && hero.left!==0){
+            hero.moveBottom()
+        }else if (hero.top>window.innerHeight-hero.size && hero.left>0){
+            hero.moveLeft()
+        }else if (hero.left===0){
+            hero.moveUp()
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 10)
+
+    }
+    start();
+</script>
+</body>
+</html>

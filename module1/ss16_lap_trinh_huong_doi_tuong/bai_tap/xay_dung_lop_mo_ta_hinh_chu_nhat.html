@@ -20,10 +20,10 @@
       this.width= width
       this.height= height
     }
-    Dientich(){
+    tinhdientich(){
       return this.height*this.width
     }
-    Chuvi(){
+    tinhchuvi(){
       return (this.width+this.height)*2
     }
     createimg(){
@@ -35,8 +35,8 @@
   }
 
   let Rectangle = new HinhCN(200,100)
-  let dientich = Rectangle.Dientich()
-  let chuvi = Rectangle.Chuvi()
+  let dientich = Rectangle.tinhdientich()
+  let chuvi = Rectangle.tinhchuvi()
   Rectangle.createimg()
   document.getElementById('dientich').innerHTML=("Diện tích hình chữ nhật: "+dientich)
   document.getElementById('chuvi').innerHTML=("Chu vi hình chữ nhật: "+chuvi)
@@ -45,8 +45,8 @@
     let newWidth = parseInt(prompt("Nhap chieu dai"))
     let newHeight = parseInt(prompt("Nhap chieu rong"))
     let newRectangle = new HinhCN(newWidth,newHeight)
-    let dientich = newRectangle.Dientich()
-    let chuvi = newRectangle.Chuvi()
+    let dientich = newRectangle.tinhdientich()
+    let chuvi = newRectangle.tinhchuvi()
     newRectangle.createimg()
     document.getElementById('dientich').innerHTML=("Diện tích hình chữ nhật: "+dientich)
     document.getElementById('chuvi').innerHTML=("Chu vi hình chữ nhật: "+chuvi)
