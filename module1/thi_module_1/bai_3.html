@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    function snt(inputnum) {
+        if (inputnum<=0 || inputnum===1){
+            return false
+        }else if(inputnum===3){
+            return true
+        } else if(inputnum===2){
+            return true
+        }else if (inputnum%2===0){
+            return false
+        }else if (inputnum%3===0){
+            return false
+        }else {
+            return true
+        }
+    }
+    function findSnt(array) {
+        let result = [];
+        for (let i = 0 ; i <array.length;i++){
+            if (snt(array[i])===true){
+                result.push(array[i])
+            }
+        }
+        return result.sort(function (a,b) {
+            return a-b
+        })
+    }
+    let arraynum = [1,5,6,23,8,47,10,3,2,3]
+    document.write("Array snt = "+findSnt(arraynum))
+</script>
+</body>
+</html>

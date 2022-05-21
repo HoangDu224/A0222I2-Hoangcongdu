@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhap so phan tu muon nhap vao"))
+    let array = [];
+    if (n>20){
+        alert("N phai be hon 20");
+    }else {
+    for (let i = 0 ; i<n ; i++){
+        array[i]= parseInt(prompt("Nhap gia tri phan tu"));
+    }
+        document.write("Array: "+array+"<br>");
+    }
+    let chan = 0;
+    let le = 0;
+    for (let i = 0 ; i < array.length ; i++){
+        if (array[i]%2===0){
+            chan +=array[i]
+        }else {
+            le +=array[i]
+        }
+    }
+    let result = chan-le
+    document.write("Ket qua= "+result)
+</script>
+</body>
+</html>

@@ -5,6 +5,9 @@
     <title>Title</title>
     <style>
         button{background-color: chartreuse;color: white}
+        tr:nth-child(odd) {
+            background-color: #dddddd;
+        }
     </style>
 </head>
 <body>
@@ -18,11 +21,10 @@
     let productList = ["Sony","Samsum Galaxy","Nokia 6","Xiaomi redmi note 4","Apple Iphone 6s","Xiaomi 5s plus"];
     display(productList);
     function display(list) {
-        let tableString = '<table style="border-collapse: collapse" width="500"> ' +
+        let tableString = '<table style="border-collapse: collapse" width="500" > ' +
             '<tr>' +
             '<th align="left">Product name</th>' +
             '<th colspan="2" id="soLuong" align="right"></th>' +
-            '<th></th>' +
             '</tr>';
         for (let i = 0; i < list.length; i++) {
             tableString += '<tr>' +

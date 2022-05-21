@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr:nth-child(odd) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="add" placeholder="New phone">
+<button onclick="add()" > Add</button>
+<h4>Display all phone</h4>
+<p id="display"></p>
+<script>
+    class Phone {
+        constructor(model,name,hang,price) {
+            this.model = model
+            this.name = name
+            this.hang = hang
+            this.price = price
+        }
+        getModel(){
+            return this.model
+        }
+        setModel(newModel){
+            this.model=newModel
+        }
+        getName(){
+            return this.name
+        }
+        setName(newName){
+            this.name=newName
+        }
+        getHang(){
+            return this.hang
+        }
+        setHang(newHang){
+            this.hang=newHang
+        }
+        getPrice(){
+            return this.price
+        }
+        setPrice(newPrice){
+            this.price = newPrice
+        }
+        toString(){
+            document.write(this.getModel()+"<br>"+
+            this.getName()+"<br>"+
+            this.getHang()+"<br>"+
+            this.getPrice())
+        }
+    }
+    let productList = [];
+    display(productList);
+    function display(list) {
+        let tableString = '<table style="border-collapse: collapse" width="500" > ' +
+            '<tr>' +
+            '<th align="left">Product name</th>' +
+            '<th>Model</th>' +
+            '<th>Name</th>' +
+            '<th>Price</th>' +
+            '</tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>' +
+                '<td>' + list[i] + '</td>\n' +
+                '<td></td>\n' +
+                '<td>name</td>\n' +
+                '<td>hang</td>\n' +
+                '<td>price</td>\n' +
+                '</tr>';
+        }
+        tableString += '</table>'
+        document.getElementById("display").innerHTML = tableString;
+        document.getElementById("soLuong").innerText = list.length;
+    }
+    function add() {
+        let newProduct = document.getElementById('add').value
+        let model = prompt("Nhap model")
+        let name = prompt("Nhap Name")
+        let hang = prompt("Nhap Hang")
+        let price = parseInt(prompt("Nhap gia"))
+        if (newProduct != "") {
+            productList.push(newProduct);
+        } else {
+            alert("Bạn cần phải nhập thông tin sản phầm");
+        }
+        display(productList);
+        document.getElementById("product").value = "";
+    }
+
+</script>
+</body>
+</html>

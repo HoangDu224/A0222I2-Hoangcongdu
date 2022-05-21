@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        let array = str.split("");
+        let count = 0;
+        for (let i = 0 ; i<array.length; i++){
+            if (array[i]===array[i].toUpperCase()){
+                count++
+            }
+        }
+        if (count===0){
+            document.write("The strings is not contain upper char")
+        }else {
+            document.write(count)
+        }
+    }
+    let str = "abcdef"
+    checkString(str)
+</script>
+</body>
+</html>
