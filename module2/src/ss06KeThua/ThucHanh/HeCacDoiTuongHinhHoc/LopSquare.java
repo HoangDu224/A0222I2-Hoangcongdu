@@ -1,9 +1,17 @@
 package ss06KeThua.ThucHanh.HeCacDoiTuongHinhHoc;
 
-    public class LopSquare extends LopRectangle {
+import ss07AbstractClassVaInterface.BaiTap.InterfaceColorable.Colorable;
 
+public class LopSquare extends LopRectangle implements Colorable {
+        double Width;
         public LopSquare(double side, String color, boolean filled) {
             super(side, side, color, filled);
+        }
+
+        public LopSquare() {
+        }
+        public LopSquare(double Width){
+            this.Width = Width;
         }
 
         public double getSide() {
@@ -14,7 +22,9 @@ package ss06KeThua.ThucHanh.HeCacDoiTuongHinhHoc;
             setWidth(side);
             setLength(side);
         }
-
+        public double getArea(){
+            return Width*Width;
+        }
         @Override
         public void setWidth(double width) {
             setSide(width);
@@ -31,5 +41,10 @@ package ss06KeThua.ThucHanh.HeCacDoiTuongHinhHoc;
                     + getSide()
                     + ", which is a subclass of "
                     + super.toString();
+        }
+
+        @Override
+        public void howToColor() {
+            System.out.println("Color all four side");
         }
     }

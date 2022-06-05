@@ -2,9 +2,14 @@ package ss06KeThua.ThucHanh.HeCacDoiTuongHinhHoc;
 
 public class LopCircle extends LopShade{
     private double radius = 1.0;
-
+    public LopCircle(){
+    }
     public LopCircle(String color, boolean filled, double radius) {
         super(color, filled);
+        this.radius = radius;
+    }
+
+    public LopCircle(double radius) {
         this.radius = radius;
     }
 

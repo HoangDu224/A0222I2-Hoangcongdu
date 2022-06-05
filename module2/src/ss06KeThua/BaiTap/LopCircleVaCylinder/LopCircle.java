@@ -7,6 +7,10 @@ public class LopCircle {
     public LopCircle() {
     }
 
+    public LopCircle(double radius) {
+        this.radius = radius;
+    }
+
     public LopCircle(double radius, String color) {
         this.radius = radius;
         this.color = color;
@@ -27,7 +31,7 @@ public class LopCircle {
     public void setColor(String color) {
         this.color = color;
     }
-    private double getArea(){
+    public double getArea(){
         return radius*radius*3.14;
     }
 
