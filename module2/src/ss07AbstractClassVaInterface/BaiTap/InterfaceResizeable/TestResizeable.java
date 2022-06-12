@@ -8,12 +8,12 @@ public class TestResizeable {
         LopShade[] shapes = new LopShade[3];
         shapes[0] = new Circle(5);
         shapes[1] =  new Rectangle(2, 5);
-        shapes[2] = new Square(20);
+        shapes[2] = new Square(5);
         for (LopShade shape: shapes) {
             if(shape instanceof Circle) {
                 Circle c1 = (Circle)shape;
                 c1.resize(50);
-            } else if(shape instanceof LopRectangle) {
+            } else if(shape instanceof Rectangle) {
                 Rectangle r1 = (Rectangle) shape;
                 r1.resize(50);
             } else {
