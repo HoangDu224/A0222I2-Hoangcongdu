@@ -1,6 +1,4 @@
-package ss09.BaiTap.TrienKhaiLinkedList;
-
-import ss09.ThucHanh.TrienKhaiLopLinkedList.MyLinkedList;
+package ss10ArraylistLinkedList.BaiTap.TrienKhaiLinkedList;
 
 public class TestLinkedList {
     public static void main(String[] args) {

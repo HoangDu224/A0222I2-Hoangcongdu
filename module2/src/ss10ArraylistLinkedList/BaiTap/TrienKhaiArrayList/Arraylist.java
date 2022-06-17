@@ -1,4 +1,4 @@
-package ss09.BaiTap.TrienKhaiArrayList;
+package ss10ArraylistLinkedList.BaiTap.TrienKhaiArrayList;
 
 public class Arraylist<E> {
     public int size = 0;

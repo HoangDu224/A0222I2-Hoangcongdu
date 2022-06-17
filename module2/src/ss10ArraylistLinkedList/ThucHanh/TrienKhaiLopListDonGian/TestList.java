@@ -1,4 +1,4 @@
-package ss09.ThucHanh.TrienKhaiLopListDonGian;
+package ss10ArraylistLinkedList.ThucHanh.TrienKhaiLopListDonGian;
 
 public class TestList {
     public static void main(String[] args) {

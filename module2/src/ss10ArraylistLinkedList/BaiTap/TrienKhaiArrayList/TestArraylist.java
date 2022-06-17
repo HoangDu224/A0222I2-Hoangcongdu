@@ -1,6 +1,4 @@
-package ss09.BaiTap.TrienKhaiArrayList;
-
-import java.util.ArrayList;
+package ss10ArraylistLinkedList.BaiTap.TrienKhaiArrayList;
 
 public class TestArraylist {
     public static void main(String[] args) {

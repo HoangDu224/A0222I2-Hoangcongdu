@@ -1,6 +1,4 @@
-package ss09.ThucHanh.TrienKhaiLopLinkedList;
-
-import java.util.Objects;
+package ss10ArraylistLinkedList.ThucHanh.TrienKhaiLopLinkedList;
 
 public class MyLinkedList {
     private Node head;
