@@ -1,8 +1,5 @@
 package ss12JavaCollectionFrameWork.BaiTap.LuyenTapSuDungArraylistLindkedList.LinkedListVer;
 
-import ss10ArraylistLinkedList.BaiTap.TrienKhaiLinkedList.LinkedList;
-import ss12JavaCollectionFrameWork.BaiTap.LuyenTapSuDungArraylistLindkedList.ArrayListVer.ProductManager;
-
 public class TestLinkedListProduct {
     public static void main(String[] args) {
         LinkedListProductManager product1 = new LinkedListProductManager();
