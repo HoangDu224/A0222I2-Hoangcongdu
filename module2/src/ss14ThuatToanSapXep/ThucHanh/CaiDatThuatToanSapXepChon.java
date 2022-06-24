@@ -5,6 +5,6 @@ public class CaiDatThuatToanSapXepChon {
 
     }
     static void selectionSort(int[] arr){
-        
+
     }
 }
