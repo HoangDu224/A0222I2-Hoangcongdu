@@ -1,6 +1,5 @@
 package ss12JavaCollectionFrameWork.BaiTap.LuyenTapSuDungArraylistLindkedList.ArrayListVer;
 
-import ss12JavaCollectionFrameWork.BaiTap.LuyenTapSuDungArraylistLindkedList.Product;
 import ss12JavaCollectionFrameWork.BaiTap.LuyenTapSuDungArraylistLindkedList.ProductAutoID;
 
 import java.util.ArrayList;
@@ -10,10 +9,11 @@ import java.util.Scanner;
 
 public class ProductManagerAutoId {
     Scanner scan = new Scanner(System.in);
-    int id =0;
+    int id =1;
     ArrayList<ProductAutoID> listProduct = new ArrayList();
     public void addProduct(String name , int price){
         listProduct.add(new ProductAutoID(name,price));
+        listProduct.get(listProduct.size()-1).setId(id++);
 
     }
     public void display(){
