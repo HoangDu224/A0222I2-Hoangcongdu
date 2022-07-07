@@ -2,14 +2,14 @@ package ss12JavaCollectionFrameWork.BaiTap.LuyenTapSuDungArraylistLindkedList.Ar
 
 import ss12JavaCollectionFrameWork.BaiTap.LuyenTapSuDungArraylistLindkedList.Product;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductManager {
     Scanner scan = new Scanner(System.in);
     ArrayList<Product> listProduct = new ArrayList();
+    public void add(Product product){
+        listProduct.add(new Product(product.getName(),product.getId(),product.getPrice()));
+    }
     public void addProduct(String name ,int id , int price){
         listProduct.add(new Product(name,id,price));
     }
@@ -17,6 +17,9 @@ public class ProductManager {
         for (int i =0 ; i<listProduct.size();i++){
             System.out.println(listProduct.get(i));
         }
+    }
+    public List getListProductt(){
+        return listProduct;
     }
     public void editById(int Id){
         boolean flag = false;
