@@ -1,7 +1,7 @@
 package ss06_Inheritance.BaiTap.LopPointVaMoveablePoint;
 
 public class LopMoveablePoint extends LopPoint {
-    public float xSpeed , ySpeed;
+    public float xSpeed, ySpeed;
 
     public LopMoveablePoint() {
     }
@@ -32,11 +32,13 @@ public class LopMoveablePoint extends LopPoint {
     public void setySpeed(float ySpeed) {
         this.ySpeed = ySpeed;
     }
-    public void setSpeed (float xSpeed , float ySpeed){
+
+    public void setSpeed(float xSpeed, float ySpeed) {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }
-    public float[] getSpeed(){
+
+    public float[] getSpeed() {
         float arr[] = new float[2];
         return arr = new float[]{this.xSpeed, this.ySpeed};
     }
@@ -50,7 +52,8 @@ public class LopMoveablePoint extends LopPoint {
                 ", y=" + y +
                 '}';
     }
-    public LopMoveablePoint move(){
+
+    public LopMoveablePoint move() {
         x += xSpeed;
         y += ySpeed;
         return this;

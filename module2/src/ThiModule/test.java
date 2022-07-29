@@ -11,8 +11,8 @@ import java.util.List;
 
 public class test {
     public static void main(String[] args) throws IOException {
-        BenhAnThuong benhAnThuong = new BenhAnThuong(1,"BA-111","BN-123","Nguyen Van A","07-08-2016","08-08-2019","Ung Thu Gan",200);
-        BenhAnVip benhAnThuong1 = new BenhAnVip(2,"BA-222","BN-123","Nguyen Van B","07-08-2016","08-08-2019","Ung Thu Gan","Vip 1","20-2-2022");
+        BenhAnThuong benhAnThuong = new BenhAnThuong(1, "BA-111", "BN-123", "Nguyen Van A", "07-08-2016", "08-08-2019", "Ung Thu Gan", 200);
+        BenhAnVip benhAnThuong1 = new BenhAnVip(2, "BA-222", "BN-123", "Nguyen Van B", "07-08-2016", "08-08-2019", "Ung Thu Gan", "Vip 1", "20-2-2022");
         FileHelper fileHelper = new FileHelper();
         List<BenhAn> benhAnList = new ArrayList<>();
         benhAnList.add(benhAnThuong);

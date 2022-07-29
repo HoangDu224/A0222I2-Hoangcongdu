@@ -19,7 +19,7 @@ public class LopCaculator {
                 if (secondOperand != 0)
                     return firstOperand / secondOperand;
                 else
-                throw new RuntimeException("Can not divide by 0");
+                    throw new RuntimeException("Can not divide by 0");
             default:
                 throw new RuntimeException("Unsupported operation");
         }

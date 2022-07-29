@@ -1,7 +1,7 @@
 package ss08CleanCodeAndRefactoring.ThucHanh.Refactoring_TachPhuongThuc;
 
 public class Cylinder {
-    public static double getVolume(int radius, int height){
+    public static double getVolume(int radius, int height) {
         double baseArea = getBaseArea(radius);
         double perimeter = getPerimeter(radius, 2, Math.PI);
         double volume = perimeter * height + 2 * baseArea;

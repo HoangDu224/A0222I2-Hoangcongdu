@@ -1,5 +1,7 @@
 package ss07_AbstractClass_And_Interface.ThucHanh.InterfaceComparableSoSanh;
+
 import java.util.Arrays;
+
 public class TestComparable {
     public static void main(String[] args) {
         ComparableCircle[] circles = new ComparableCircle[3];

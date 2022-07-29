@@ -12,8 +12,8 @@ public class Circle extends LopCircle implements Resizeable {
 
     @Override
     public void resize(double percent) {
-        System.out.println("Size Circle: "+this.getArea());
-        System.out.println("Percent Circle: "+percent);
-        System.out.println("Resize Circle: "+this.getArea()*percent/100);
+        System.out.println("Size Circle: " + this.getArea());
+        System.out.println("Percent Circle: " + percent);
+        System.out.println("Resize Circle: " + this.getArea() * percent / 100);
     }
 }

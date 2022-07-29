@@ -1,7 +1,7 @@
 package ss06_Inheritance.BaiTap.LopPoint2dVaPoint3d;
 
 public class LopPoint3d extends LopPoint2d {
-    public float z ;
+    public float z;
 
     public LopPoint3d(float x, float y, float z) {
         super(x, y);
@@ -18,14 +18,16 @@ public class LopPoint3d extends LopPoint2d {
     public void setZ(float z) {
         this.z = z;
     }
-    public void setXYZ(float x , float y , float z){
+
+    public void setXYZ(float x, float y, float z) {
         this.x = x;
-        this.y = y ;
-        this.z = z ;
+        this.y = y;
+        this.z = z;
     }
-    public float[] getXYZ(){
+
+    public float[] getXYZ() {
         float[] arr = new float[3];
-        return  arr= new float[]{this.x, this.y,this.z};
+        return arr = new float[]{this.x, this.y, this.z};
     }
 
     @Override

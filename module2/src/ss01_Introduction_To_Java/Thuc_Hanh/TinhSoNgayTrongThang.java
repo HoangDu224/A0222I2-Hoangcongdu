@@ -1,12 +1,14 @@
 package ss01_Introduction_To_Java.Thuc_Hanh;
+
 import java.util.Scanner;
+
 public class TinhSoNgayTrongThang {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input month: ");
         int month = scanner.nextInt();
         String daysInMonth;
-        switch (month){
+        switch (month) {
             case 1:
             case 3:
             case 5:
@@ -28,7 +30,7 @@ public class TinhSoNgayTrongThang {
             default:
                 daysInMonth = "";
         }
-        if (!daysInMonth.equals("")){
+        if (!daysInMonth.equals("")) {
             System.out.printf("The month '%d' has %s days!", month, daysInMonth);
         } else {
             System.out.print("Invalid input!");

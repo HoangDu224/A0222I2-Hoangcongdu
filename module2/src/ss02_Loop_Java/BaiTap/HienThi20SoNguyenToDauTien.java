@@ -7,22 +7,23 @@ public class HienThi20SoNguyenToDauTien {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap so luong so snt can in ra");
         int number = scanner.nextInt();
-        int count = 0 ;
-        for (int i = 1 ; count<number;i++){
-            if (checkSnt(i)){
+        int count = 0;
+        for (int i = 1; count < number; i++) {
+            if (checkSnt(i)) {
                 System.out.println(i);
                 count++;
             }
         }
     }
-    public static boolean checkSnt(int num){
+
+    public static boolean checkSnt(int num) {
         boolean check = true;
-        if (num<2){
+        if (num < 2) {
             check = false;
-        }else {
+        } else {
             int i = 2;
-            while (i<num){
-                if (num % i == 0){
+            while (i < num) {
+                if (num % i == 0) {
                     check = false;
                     break;
                 }

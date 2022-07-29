@@ -9,10 +9,10 @@ public class LopHinhChuNhat {
         double width = scanner.nextDouble();
         System.out.println("Enter height: ");
         double height = scanner.nextDouble();
-        Rectangle hcn1 = new Rectangle(width,height);
-        System.out.println("Your Rectangle \n"+hcn1.display());
-        System.out.println("Area of the Rectangle: \n"+hcn1.getArea());
-        System.out.println("Perimeter of the Rectangle: \n"+hcn1.getPerimeter());
+        Rectangle hcn1 = new Rectangle(width, height);
+        System.out.println("Your Rectangle \n" + hcn1.display());
+        System.out.println("Area of the Rectangle: \n" + hcn1.getArea());
+        System.out.println("Perimeter of the Rectangle: \n" + hcn1.getPerimeter());
     }
 }
 

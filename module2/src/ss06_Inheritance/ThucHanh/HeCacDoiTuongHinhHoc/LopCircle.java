@@ -1,9 +1,11 @@
 package ss06_Inheritance.ThucHanh.HeCacDoiTuongHinhHoc;
 
-public class LopCircle extends LopShade{
+public class LopCircle extends LopShade {
     private double radius = 1.0;
-    public LopCircle(){
+
+    public LopCircle() {
     }
+
     public LopCircle(String color, boolean filled, double radius) {
         super(color, filled);
         this.radius = radius;
@@ -16,6 +18,7 @@ public class LopCircle extends LopShade{
     public double getRadius() {
         return radius;
     }
+
     public void setRadius(double radius) {
         this.radius = radius;
     }

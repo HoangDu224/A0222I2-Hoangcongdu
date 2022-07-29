@@ -7,14 +7,14 @@ public class ThemPhanTuVaoMang {
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Enter size: ");
         int size = scanner.nextInt();
-        int OldArray[]=new int[size];
-        for (int i = 0 ; i <OldArray.length;i++){
-            System.out.println("Input value index "+i);
-            OldArray[i]= scanner.nextInt();
+        int OldArray[] = new int[size];
+        for (int i = 0; i < OldArray.length; i++) {
+            System.out.println("Input value index " + i);
+            OldArray[i] = scanner.nextInt();
         }
         System.out.println("Mang da nhap vao: ");
-        for (int i = 0 ; i <OldArray.length;i++){
-            System.out.print(OldArray[i]+"\t");
+        for (int i = 0; i < OldArray.length; i++) {
+            System.out.print(OldArray[i] + "\t");
         }
         System.out.println("\nNhap gia tri muon them vao: ");
         int value = scanner.nextInt();
@@ -22,8 +22,8 @@ public class ThemPhanTuVaoMang {
         int position = scanner.nextInt();
 
         int n = OldArray.length;
-        int array[] = new int[n+1];
-        while (position < 0 || position>array.length) {
+        int array[] = new int[n + 1];
+        while (position < 0 || position > array.length) {
             System.out.println(" không chèn được phần tử vào mảng.");
             System.out.println(" Nhap lai");
             position = scanner.nextInt();
@@ -37,8 +37,8 @@ public class ThemPhanTuVaoMang {
             k++;
         }
         System.out.println("Mang sau khi them vao:");
-        for (int i = 0 ; i <array.length;i++){
-            System.out.printf(array[i]+"\t");
+        for (int i = 0; i < array.length; i++) {
+            System.out.printf(array[i] + "\t");
         }
     }
 }

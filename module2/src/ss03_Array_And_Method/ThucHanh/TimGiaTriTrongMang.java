@@ -15,7 +15,7 @@ public class TimGiaTriTrongMang {
                 check = true;
             }
         }
-        if (!check){
+        if (!check) {
             System.out.println("Not found");
         }
     }

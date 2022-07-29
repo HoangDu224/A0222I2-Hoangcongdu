@@ -15,20 +15,21 @@ public class SuDungLopillegalTriangleExCepTion {
                 double b = Double.parseDouble(scan.nextLine());
                 System.out.println("Canh c:");
                 double c = Double.parseDouble(scan.nextLine());
-                Triagle triagle = new Triagle(a,b,c);
+                Triagle triagle = new Triagle(a, b, c);
                 break;
-            }catch (InputMismatchException | NumberFormatException e){
+            } catch (InputMismatchException | NumberFormatException e) {
                 System.err.println(e.getMessage());
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.err.println(e.getMessage());
             }
-        }while (true);
+        } while (true);
     }
 }
-class Triagle{
-   private double side1;
-   private double side2;
-   private double side3;
+
+class Triagle {
+    private double side1;
+    private double side2;
+    private double side3;
 
     @Override
     public String toString() {
@@ -63,23 +64,25 @@ class Triagle{
         this.side3 = side3;
     }
 
-    public Triagle(double side1, double side2, double side3) throws IllegalTriangleException  {
+    public Triagle(double side1, double side2, double side3) throws IllegalTriangleException {
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
-        if (side1<0 || side2<0 || side3<0){
+        if (side1 < 0 || side2 < 0 || side3 < 0) {
             throw new IllegalTriangleException("side < 0 ");
-        }else if (side1+side2<side3 || side2+side3<side1 || side3+side1<side2){
+        } else if (side1 + side2 < side3 || side2 + side3 < side1 || side3 + side1 < side2) {
             throw new IllegalTriangleException("sum 2 side < 1 side");
         }
     }
 }
+
 class IllegalTriangleException extends Exception {
-    public IllegalTriangleException(String message){
+    public IllegalTriangleException(String message) {
         super(message);
     }
+
     @Override
-    public String getMessage(){
+    public String getMessage() {
         return super.getMessage();
     }
 }

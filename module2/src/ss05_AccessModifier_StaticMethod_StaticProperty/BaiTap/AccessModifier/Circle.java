@@ -6,13 +6,16 @@ public class Circle {
 
     public Circle() {
     }
+
     public Circle(double radius) {
         this.radius = radius;
     }
-    public double getRadius(){
+
+    public double getRadius() {
         return this.radius;
     }
-    public double getArea(){
-        return radius*radius*3.14;
+
+    public double getArea() {
+        return radius * radius * 3.14;
     }
 }

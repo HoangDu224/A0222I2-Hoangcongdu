@@ -7,12 +7,12 @@ public class DaoChuoi {
         Stack<String> wStack = new Stack<>();
         String str = "AbcDef";
         String arr[] = str.split("");
-        for (int i = 0 ;i<arr.length;i++){
+        for (int i = 0; i < arr.length; i++) {
             wStack.push(arr[i]);
         }
         String result = "";
-        while (!wStack.empty()){
-            result +=wStack.pop();
+        while (!wStack.empty()) {
+            result += wStack.pop();
         }
         System.out.println(result);
     }

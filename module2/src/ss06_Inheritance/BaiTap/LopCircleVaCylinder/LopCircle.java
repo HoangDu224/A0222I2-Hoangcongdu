@@ -31,8 +31,9 @@ public class LopCircle {
     public void setColor(String color) {
         this.color = color;
     }
-    public double getArea(){
-        return radius*radius*3.14;
+
+    public double getArea() {
+        return radius * radius * 3.14;
     }
 
     @Override
@@ -40,7 +41,7 @@ public class LopCircle {
         return "LopCircle{" +
                 "radius=" + radius +
                 ", color='" + color +
-                ",V='"+getArea()+'\'' +
+                ",V='" + getArea() + '\'' +
                 '}';
     }
 }

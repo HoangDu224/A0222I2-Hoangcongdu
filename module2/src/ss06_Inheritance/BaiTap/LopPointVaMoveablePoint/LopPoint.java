@@ -1,7 +1,7 @@
 package ss06_Inheritance.BaiTap.LopPointVaMoveablePoint;
 
 public class LopPoint {
-    public float x,y;
+    public float x, y;
 
     public LopPoint() {
     }
@@ -26,11 +26,13 @@ public class LopPoint {
     public void setY(float y) {
         this.y = y;
     }
-    public void setXY(float x , float y){
+
+    public void setXY(float x, float y) {
         this.x = x;
         this.y = y;
     }
-    public float [] getXY (){
+
+    public float[] getXY() {
         float arr[] = new float[2];
         return arr = new float[]{this.x, this.y};
     }

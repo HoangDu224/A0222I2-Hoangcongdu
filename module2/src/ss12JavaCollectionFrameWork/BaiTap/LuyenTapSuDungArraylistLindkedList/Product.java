@@ -1,6 +1,6 @@
 package ss12JavaCollectionFrameWork.BaiTap.LuyenTapSuDungArraylistLindkedList;
 
-public class Product{
+public class Product {
     public String name;
     public int Id;
     public int price;

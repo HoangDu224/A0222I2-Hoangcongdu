@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 public class TestMap {
     public static void main(String[] args) {
-        Map<String,Integer> hashMap = new HashMap<>();
+        Map<String, Integer> hashMap = new HashMap<>();
         hashMap.put("Bmith", 30);
         hashMap.put("Anderson", 31);
         hashMap.put("Dewis", 29);

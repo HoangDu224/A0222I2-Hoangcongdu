@@ -33,13 +33,18 @@ public class LopFan {
     }
 
     public String getSpeed() {
-        switch (this.speed){
-            case 1: return "slow";
-            case 2: return "Medium";
-            case 3: return "Fast";
-            default: return "speed khong hop le";
+        switch (this.speed) {
+            case 1:
+                return "slow";
+            case 2:
+                return "Medium";
+            case 3:
+                return "Fast";
+            default:
+                return "speed khong hop le";
         }
     }
+
     public void setSpeed(int speed) {
         this.speed = speed;
     }
@@ -51,11 +56,12 @@ public class LopFan {
     public void setColor(String color) {
         this.color = color;
     }
-    public String toString(){
-        if (this.on==false){
-           return "Speed: "+this.getSpeed()+"\nColor: "+this.getColor()+"\nradius: "+this.getRadius()+"\nFan is off";
-        }else {
-           return "Speed: "+this.getSpeed()+"\nColor: "+this.getColor()+"\nradius: "+this.getRadius()+"\nFan is on";
+
+    public String toString() {
+        if (this.on == false) {
+            return "Speed: " + this.getSpeed() + "\nColor: " + this.getColor() + "\nradius: " + this.getRadius() + "\nFan is off";
+        } else {
+            return "Speed: " + this.getSpeed() + "\nColor: " + this.getColor() + "\nradius: " + this.getRadius() + "\nFan is on";
         }
     }
 }

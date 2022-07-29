@@ -7,7 +7,7 @@ public class TestProductManagerAutoId {
         Scanner scan = new Scanner(System.in);
         ProductManagerAutoId product = new ProductManagerAutoId();
         boolean check = true;
-        while (check){
+        while (check) {
             System.out.println("1.Thêm sản phẩm");
             System.out.println("2.Sửa thông tin sản phẩm theo id");
             System.out.println("3.Xoá sản phẩm theo id");
@@ -16,13 +16,13 @@ public class TestProductManagerAutoId {
             System.out.println("6.Sắp xếp sản phẩm tăng dần, giảm dần theo giá");
             System.out.println("0.Exit");
             int choose = Integer.parseInt(scan.nextLine());
-            switch (choose){
+            switch (choose) {
                 case 1:
                     System.out.println("Nhap gia san pham");
                     int price = Integer.parseInt(scan.nextLine());
                     System.out.println("Nhap ten san pham");
                     String name = scan.nextLine();
-                    product.addProduct(name,price);
+                    product.addProduct(name, price);
                     break;
                 case 2:
                     System.out.println("Nhap Id san pham de sua");
@@ -45,7 +45,7 @@ public class TestProductManagerAutoId {
                     System.out.println("1.Sort tang dan");
                     System.out.println("2.Sort giam dan");
                     int sort = Integer.parseInt(scan.nextLine());
-                    switch (sort){
+                    switch (sort) {
                         case 1:
                             product.sortTangDan();
                             break;
@@ -54,7 +54,8 @@ public class TestProductManagerAutoId {
                             break;
                     }
                     break;
-                case 0: check = false;
+                case 0:
+                    check = false;
             }
         }
 

@@ -13,20 +13,21 @@ public class sumNumberArrays {
         System.out.println(result.sumNumbersFile("src\\ss16IOfile\\ThucHanh\\TimSoLonNhatTrongFileText\\numbers.txt"));
 
     }
-    public int sumNumbersFile (String filepath){
-        int sum = 0 ;
+
+    public int sumNumbersFile(String filepath) {
+        int sum = 0;
         try {
             File file = new File(filepath);
-            if (!file.exists()){
+            if (!file.exists()) {
                 throw new FileNotFoundException();
             }
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line = "";
-            while((line = br.readLine()) !=null){
+            while ((line = br.readLine()) != null) {
                 sum += Integer.parseInt(line);
             }
             br.close();
-        }catch (Exception e ){
+        } catch (Exception e) {
             System.err.println("Fie không tồn tại or nội dung có lỗi!");
         }
         return sum;

@@ -3,7 +3,12 @@ package ss06_Inheritance.ThucHanh.HeCacDoiTuongHinhHoc;
 public class LopShade {
     public String color = "green";
     public boolean filled = true;
-    public LopShade(){};
+
+    public LopShade() {
+    }
+
+    ;
+
     public LopShade(String color, boolean filled) {
         this.color = color;
         this.filled = filled;
@@ -27,16 +32,16 @@ public class LopShade {
 
     @Override
     public String toString() {
-        if (filled){
-        return "LopShade{" +
-                "color='" + color + '\'' +
-                ",  filled"+
-                '}';
+        if (filled) {
+            return "LopShade{" +
+                    "color='" + color + '\'' +
+                    ",  filled" +
+                    '}';
         } else {
             return "LopShade{" +
-                "color='" + color + '\'' +
-                ",  not filled"+
-                '}';
+                    "color='" + color + '\'' +
+                    ",  not filled" +
+                    '}';
         }
     }
 }

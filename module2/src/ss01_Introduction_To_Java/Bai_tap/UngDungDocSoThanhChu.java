@@ -1,22 +1,24 @@
 package ss01_Introduction_To_Java.Bai_tap;
+
 import java.util.Scanner;
+
 public class UngDungDocSoThanhChu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap so can doc: ");
         int inputNum = scanner.nextInt();
-        if (inputNum>=0 && inputNum<10){
+        if (inputNum >= 0 && inputNum < 10) {
             System.out.println(num(inputNum));
-        }else if (inputNum<100){
+        } else if (inputNum < 100) {
             System.out.println(twoNum(inputNum));
-        }else {
+        } else {
             System.out.println(threeNum(inputNum));
         }
 
     }
 
-    public static String num (int inputNum){
-        switch (inputNum){
+    public static String num(int inputNum) {
+        switch (inputNum) {
             case 1:
                 return "one";
             case 2:
@@ -40,7 +42,8 @@ public class UngDungDocSoThanhChu {
         }
         return "zero";
     }
-    public static String twoNum (int num) {
+
+    public static String twoNum(int num) {
         String result = "";
         if (num < 20) {
             switch (num) {
@@ -98,73 +101,74 @@ public class UngDungDocSoThanhChu {
         }
         return result;
     }
-    public static String threeNum (int num){
-        String result="";
 
-        int hundred = num/100;
-        int other = num - (hundred*100);
-            if (other!=0){
-                switch (hundred){
-                    case 1:
-                        result = "One hundred and ";
-                        break;
-                    case 2:
-                        result = "Two hundred and ";
-                        break;
-                    case 3:
-                        result = "Three hundred and ";
-                        break;
-                    case 4:
-                        result = "Four hundred and ";
-                        break;
-                    case 5:
-                        result = "Five hundred and ";
-                        break;
-                    case 6:
-                        result = "Six hundred and ";
-                        break;
-                    case 7:
-                        result = "Seven hundred and ";
-                        break;
-                    case 8:
-                        result = "Eight hundred and ";
-                        break;
-                    case 9:
-                        result = "Nine hundred and ";
-                        break;
-                }
-                result += twoNum(other);
-            }else {
-                switch (hundred){
-                    case 1:
-                        result = "One hundred ";
-                        break;
-                    case 2:
-                        result = "Two hundred ";
-                        break;
-                    case 3:
-                        result = "Three hundred ";
-                        break;
-                    case 4:
-                        result = "Four hundred ";
-                        break;
-                    case 5:
-                        result = "Five hundred ";
-                        break;
-                    case 6:
-                        result = "Six hundred ";
-                        break;
-                    case 7:
-                        result = "Seven hundred ";
-                        break;
-                    case 8:
-                        result = "Eight hundred";
-                        break;
-                    case 9:
-                        result = "Nine hundred";
-                        break;
-                }
+    public static String threeNum(int num) {
+        String result = "";
+
+        int hundred = num / 100;
+        int other = num - (hundred * 100);
+        if (other != 0) {
+            switch (hundred) {
+                case 1:
+                    result = "One hundred and ";
+                    break;
+                case 2:
+                    result = "Two hundred and ";
+                    break;
+                case 3:
+                    result = "Three hundred and ";
+                    break;
+                case 4:
+                    result = "Four hundred and ";
+                    break;
+                case 5:
+                    result = "Five hundred and ";
+                    break;
+                case 6:
+                    result = "Six hundred and ";
+                    break;
+                case 7:
+                    result = "Seven hundred and ";
+                    break;
+                case 8:
+                    result = "Eight hundred and ";
+                    break;
+                case 9:
+                    result = "Nine hundred and ";
+                    break;
             }
-            return result;
+            result += twoNum(other);
+        } else {
+            switch (hundred) {
+                case 1:
+                    result = "One hundred ";
+                    break;
+                case 2:
+                    result = "Two hundred ";
+                    break;
+                case 3:
+                    result = "Three hundred ";
+                    break;
+                case 4:
+                    result = "Four hundred ";
+                    break;
+                case 5:
+                    result = "Five hundred ";
+                    break;
+                case 6:
+                    result = "Six hundred ";
+                    break;
+                case 7:
+                    result = "Seven hundred ";
+                    break;
+                case 8:
+                    result = "Eight hundred";
+                    break;
+                case 9:
+                    result = "Nine hundred";
+                    break;
+            }
+        }
+        return result;
     }
 }

@@ -9,22 +9,25 @@ import java.util.Scanner;
 
 public class ProductManagerAutoId {
     Scanner scan = new Scanner(System.in);
-    int id =1;
+    int id = 1;
     ArrayList<ProductAutoID> listProduct = new ArrayList();
-    public void addProduct(String name , int price){
-        listProduct.add(new ProductAutoID(name,price));
-        listProduct.get(listProduct.size()-1).setId(id++);
+
+    public void addProduct(String name, int price) {
+        listProduct.add(new ProductAutoID(name, price));
+        listProduct.get(listProduct.size() - 1).setId(id++);
 
     }
-    public void display(){
-        for (int i =0 ; i<listProduct.size();i++){
+
+    public void display() {
+        for (int i = 0; i < listProduct.size(); i++) {
             System.out.println(listProduct.get(i));
         }
     }
-    public void editById(int Id){
+
+    public void editById(int Id) {
         boolean flag = false;
-        for (int i =0 ; i<listProduct.size();i++){
-            if(listProduct.get(i).getId() == Id ){
+        for (int i = 0; i < listProduct.size(); i++) {
+            if (listProduct.get(i).getId() == Id) {
                 System.out.println("Name Edit :");
                 String name = scan.nextLine();
                 System.out.println("Price Edit :");
@@ -35,43 +38,47 @@ public class ProductManagerAutoId {
                 break;
             }
         }
-        if (!flag){
+        if (!flag) {
             System.out.println("Id not found");
         }
     }
-    public void deleteById(int Id){
+
+    public void deleteById(int Id) {
         boolean flag = false;
-        for (int i =0 ; i<listProduct.size();i++){
-            if(listProduct.get(i).getId() == Id ){
+        for (int i = 0; i < listProduct.size(); i++) {
+            if (listProduct.get(i).getId() == Id) {
                 listProduct.remove(i);
                 flag = true;
             }
         }
-        if (!flag){
+        if (!flag) {
             System.out.println("Id not found");
         }
     }
-    public Object searchByName(String name){
-        for (int i =0 ; i<listProduct.size();i++){
-            if(listProduct.get(i).getName().equals(name)){
+
+    public Object searchByName(String name) {
+        for (int i = 0; i < listProduct.size(); i++) {
+            if (listProduct.get(i).getName().equals(name)) {
                 return listProduct.get(i);
             }
         }
         return null;
     }
-    public void sortTangDan(){
+
+    public void sortTangDan() {
         Collections.sort(listProduct, new Comparator<ProductAutoID>() {
             @Override
             public int compare(ProductAutoID o1, ProductAutoID o2) {
-                return  o1.getPrice() - o2.getPrice();
+                return o1.getPrice() - o2.getPrice();
             }
         });
     }
-    public void sortGiamDan(){
+
+    public void sortGiamDan() {
         Collections.sort(listProduct, new Comparator<ProductAutoID>() {
             @Override
             public int compare(ProductAutoID o1, ProductAutoID o2) {
-                return  o1.getPrice() < o2.getPrice()? 1 : -1;
+                return o1.getPrice() < o2.getPrice() ? 1 : -1;
             }
         });
     }

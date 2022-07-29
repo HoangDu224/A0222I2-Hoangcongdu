@@ -7,73 +7,84 @@ public class Arraylist<E> {
 
     public Arraylist() {
     }
-    public Arraylist(int size){
+
+    public Arraylist(int size) {
         this.size = size;
         elements = new Object[size];
     }
-    public E get(int i){
+
+    public E get(int i) {
         return (E) elements[i];
     }
-    public void add(int index, E element){
+
+    public void add(int index, E element) {
         Object temp = elements[index];
         elements[index] = element;
-        for (int i = index+1;i<elements.length;i++){
-            elements[i]= temp;
+        for (int i = index + 1; i < elements.length; i++) {
+            elements[i] = temp;
             temp = elements[i++];
         }
     }
-    public E remove (int index){
-        if (index>=size() || index<0){
-            throw new IndexOutOfBoundsException("Index: "+index+" , Size: "+index);
+
+    public E remove(int index) {
+        if (index >= size() || index < 0) {
+            throw new IndexOutOfBoundsException("Index: " + index + " , Size: " + index);
         }
-        E indexRemove ;
+        E indexRemove;
         indexRemove = (E) elements[index];
-        for (int i = 0;i<elements.length;i++){
-            elements[index]=elements[i++];
+        for (int i = 0; i < elements.length; i++) {
+            elements[index] = elements[i++];
         }
         return indexRemove;
     }
-    public int size(){
+
+    public int size() {
         return size;
     }
-    public E clone(){
+
+    public E clone() {
         Object[] cloneElement = new Object[size()];
-        for (int i = 0 ; i<elements.length;i++){
-            cloneElement[i]=elements[i];
+        for (int i = 0; i < elements.length; i++) {
+            cloneElement[i] = elements[i];
         }
         return (E) cloneElement;
     }
-    public boolean contains(E o){
-        for (int i = 0 ; i<elements.length;i++){
-            if (o.equals(elements[i])){
+
+    public boolean contains(E o) {
+        for (int i = 0; i < elements.length; i++) {
+            if (o.equals(elements[i])) {
                 return true;
             }
         }
         return false;
     }
-    public int indexOf(E o){
-        for (int i = 0 ; i<elements.length;i++){
-            if (o.equals(elements[i])){
+
+    public int indexOf(E o) {
+        for (int i = 0; i < elements.length; i++) {
+            if (o.equals(elements[i])) {
                 return i;
             }
         }
         return -1;
     }
-    public boolean Add(E e){
+
+    public boolean Add(E e) {
         ensureCapacity();
-        elements[size]= e;
+        elements[size] = e;
         size++;
         return false;
     }
-     public void ensureCapacity(){
-    if (size >= elements.length) {
-        E[] newData = (E[]) (new Object[size * 2 + 1]);
-        System.arraycopy(elements, 0, newData, 0, size);
-        elements = newData;
+
+    public void ensureCapacity() {
+        if (size >= elements.length) {
+            E[] newData = (E[]) (new Object[size * 2 + 1]);
+            System.arraycopy(elements, 0, newData, 0, size);
+            elements = newData;
+        }
     }
-}
-    public void clear(){
+
+    public void clear() {
         elements = new Object[DEFAULT_CAPACITY];
-        size=0;
+        size = 0;
     }
 }

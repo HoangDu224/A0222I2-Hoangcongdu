@@ -2,7 +2,7 @@ package ss17BinaryFileAndSerialization.BaiTap.QuanLiSanPhamRaFileNhiPhan;
 
 import java.io.Serializable;
 
-public class Productt implements Serializable{
+public class Productt implements Serializable {
     private String name;
     private int price;
     private String production;

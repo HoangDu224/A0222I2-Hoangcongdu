@@ -1,7 +1,7 @@
 package ss06_Inheritance.BaiTap.LopPoint2dVaPoint3d;
 
 public class LopPoint2d {
-    public float x,y;
+    public float x, y;
 
     public LopPoint2d() {
     }
@@ -26,13 +26,15 @@ public class LopPoint2d {
     public void setY(float y) {
         this.y = y;
     }
-    public void setXY(float x , float y){
-        this.x =  x;
-        this.y = y ;
+
+    public void setXY(float x, float y) {
+        this.x = x;
+        this.y = y;
     }
-    public float[] getXY(){
+
+    public float[] getXY() {
         float[] arr = new float[2];
-        return  arr= new float[]{this.x, this.y};
+        return arr = new float[]{this.x, this.y};
     }
 
     @Override

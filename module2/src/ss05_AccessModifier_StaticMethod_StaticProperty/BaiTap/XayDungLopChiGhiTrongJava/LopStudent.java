@@ -1,7 +1,7 @@
 package ss05_AccessModifier_StaticMethod_StaticProperty.BaiTap.XayDungLopChiGhiTrongJava;
 
 public class LopStudent {
-    private String name ,classis;
+    private String name, classis;
 
     public LopStudent() {
     }
@@ -18,7 +18,8 @@ public class LopStudent {
     public void setClassis(String classis) {
         this.classis = classis;
     }
-    public String getInfo(){
-        return "Name: "+this.name+"\nLop: "+this.classis;
+
+    public String getInfo() {
+        return "Name: " + this.name + "\nLop: " + this.classis;
     }
 }

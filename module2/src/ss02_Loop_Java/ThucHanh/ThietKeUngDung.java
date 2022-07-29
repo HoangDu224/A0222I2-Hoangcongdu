@@ -13,7 +13,7 @@ public class ThietKeUngDung {
         System.out.println("0. Exit");
         System.out.println("Enter your choice: ");
         int choice = input.nextInt();
-        switch (choice){
+        switch (choice) {
             case 1:
                 System.out.println("*****");
                 System.out.println("****");

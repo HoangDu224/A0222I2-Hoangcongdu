@@ -2,6 +2,7 @@ package ss08CleanCodeAndRefactoring.ThucHanh.Refactoring_DoiTenBien_TachHang;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LopCaculatorTest {
@@ -16,6 +17,7 @@ class LopCaculatorTest {
         int result = LopCaculator.calculate(firstOperand, secondOperand, operand);
         assertEquals(expected, result);
     }
+
     @Test
     @DisplayName("Testing subtraction")
     void testCalculateSub() {
@@ -27,6 +29,7 @@ class LopCaculatorTest {
         int result = LopCaculator.calculate(firstOperand, secondOperand, operand);
         assertEquals(expected, result);
     }
+
     @Test
     @DisplayName("Testing multiplication")
     void testCalculateMul() {
@@ -38,6 +41,7 @@ class LopCaculatorTest {
         int result = LopCaculator.calculate(firstOperand, secondOperand, operand);
         assertEquals(expected, result);
     }
+
     @Test
     @DisplayName("Testing division")
     void testCalculateDiv() {
@@ -49,6 +53,7 @@ class LopCaculatorTest {
         int result = LopCaculator.calculate(firstOperand, secondOperand, operand);
         assertEquals(expected, result);
     }
+
     @Test
     @DisplayName("Testing division by zero")
     void testCalculateDivByZero() {
@@ -57,8 +62,11 @@ class LopCaculatorTest {
         char operand = '/';
 
         assertThrows(RuntimeException.class,
-                ()-> {LopCaculator.calculate(firstOperand, secondOperand, operand);});
+                () -> {
+                    LopCaculator.calculate(firstOperand, secondOperand, operand);
+                });
     }
+
     @Test
     @DisplayName("Testing wrong operator")
     void testCalculateWrongOperator() {
@@ -67,6 +75,8 @@ class LopCaculatorTest {
         char operand = '=';
 
         assertThrows(RuntimeException.class,
-                ()-> {LopCaculator.calculate(firstOperand, secondOperand, operand);});
+                () -> {
+                    LopCaculator.calculate(firstOperand, secondOperand, operand);
+                });
     }
 }

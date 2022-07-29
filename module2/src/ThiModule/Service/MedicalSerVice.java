@@ -50,6 +50,6 @@ public class MedicalSerVice {
     }
 
     private void listToCVS() throws IOException {
-        fileHelper.writeFileCSV("src\\ThiModule\\csvFile.csv",benhAnList,true);
+        fileHelper.writeFileCSV("src\\ThiModule\\csvFile.csv", benhAnList, true);
     }
 }

@@ -8,22 +8,22 @@ public class KiemTraSoNguyenTo {
         System.out.println("Nhap so can kiem tra: ");
         int inputNum = scanner.nextInt();
         boolean check = true;
-        if (inputNum<2){
-            System.out.println(inputNum+" Khong phai snt");
-        }else {
+        if (inputNum < 2) {
+            System.out.println(inputNum + " Khong phai snt");
+        } else {
             int i = 2;
-            while (i<inputNum){
-                if (inputNum % i == 0){
+            while (i < inputNum) {
+                if (inputNum % i == 0) {
                     check = false;
                     break;
                 }
                 i++;
             }
         }
-        if (check){
-            System.out.println(inputNum+" La snt");
-        }else {
-            System.out.println(inputNum+" Khong Phai snt");
+        if (check) {
+            System.out.println(inputNum + " La snt");
+        } else {
+            System.out.println(inputNum + " Khong Phai snt");
         }
     }
 }

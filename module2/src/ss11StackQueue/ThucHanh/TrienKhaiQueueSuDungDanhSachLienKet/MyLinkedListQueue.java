@@ -3,19 +3,22 @@ package ss11StackQueue.ThucHanh.TrienKhaiQueueSuDungDanhSachLienKet;
 public class MyLinkedListQueue {
     private Node head;
     private Node tail;
-    public MyLinkedListQueue(){
+
+    public MyLinkedListQueue() {
         this.head = null;
         this.tail = null;
     }
-    public  void enqueue(int key){
+
+    public void enqueue(int key) {
         Node temp = new Node(key);
-        if (this.tail == null){
+        if (this.tail == null) {
             this.head = this.tail = temp;
             return;
         }
         this.tail.next = temp;
         this.tail = temp;
     }
+
     public Node dequeue() {
         if (this.head == null)
             return null;
@@ -25,10 +28,12 @@ public class MyLinkedListQueue {
             this.tail = null;
         return temp;
     }
+
     class Node {
         public int key;
         public Node next;
-        public Node(int key){
+
+        public Node(int key) {
             this.key = key;
             this.next = null;
         }
