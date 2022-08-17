@@ -1,18 +1,17 @@
 package ThiModule.Menu;
 
-import QuanLyDienThoai.Exception.NotFoundException;
-import QuanLyDienThoai.Model.Phone;
 import ThiModule.BenhAn.BenhAn;
 import ThiModule.BenhAn.BenhAnThuong;
 import ThiModule.BenhAn.BenhAnVip;
 import ThiModule.Exception.NotFoundMedicalRecordException;
+import ThiModule.Regex.Regex;
 import ThiModule.Service.MedicalSerVice;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
+    static Regex regex = new Regex();
     static Scanner scanner = new Scanner(System.in);
     static MedicalSerVice medicalSerVice = new MedicalSerVice();
 
@@ -51,14 +50,18 @@ public class Menu {
         int choose = getChoice();
         System.out.println("Ma Benh An :");
         String maBenhAn = scanner.nextLine();
+        regex.checkBA(maBenhAn);
         System.out.println("Ma Benh Nhan: ");
         String maBenhNhan = scanner.nextLine();
+        regex.checkBN(maBenhNhan);
         System.out.println("Nhap Ten Benh Nhan: ");
         String name = scanner.nextLine();
         System.out.println("Ngay Nhap vien: ");
         String dataNhapVien = scanner.nextLine();
+        regex.checkDate(dataNhapVien);
         System.out.println("Ngay ra vien :");
         String dataRaVien = scanner.nextLine();
+        regex.checkDate(dataRaVien);
         System.out.println("Ly do nhap vien:");
         String lyDoNhapVien = scanner.nextLine();
         if (choose == 1) {
@@ -68,7 +71,7 @@ public class Menu {
             medicalSerVice.addBenhAn(benhNhanThuong);
         } else {
             String vip;
-            System.out.println("Loai Vip:\n1.Vip 1\n2.Vip 2\nVip 3");
+            System.out.println("Loai Vip:\n1.Vip 1\n2.Vip 2\n3.Vip 3");
             switch (getChoice()) {
                 case 1:
                     vip = "Vip 1";

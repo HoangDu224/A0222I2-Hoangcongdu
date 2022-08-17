@@ -13,20 +13,18 @@ import java.util.Scanner;
 public class MedicalSerVice {
     Scanner scan = new Scanner(System.in);
     private static FileHelper fileHelper = new FileHelper();
-    private static List<BenhAn> benhAnList = new ArrayList<>();
+    public static List<BenhAn> benhAnList = new ArrayList<>();
     static int id = 1;
-    private final static String PATH = "src\\ThiModule\\csvFile.csv";
+    private final static String PATH = "src\\ThiModule\\testfile.csv";
 
-    static {
-        BenhAnThuong benhAnThuong = new BenhAnThuong(0, "BA-111", "BN-123", "Nguyen Van A", "07-08-2016", "08-08-2019", "Ung Thu Gan", 200);
-        BenhAnThuong benhAnThuong1 = new BenhAnThuong(0, "BA-222", "BN-123", "Nguyen Van B", "07-08-2016", "08-08-2019", "Ung Thu Gan", 2000);
-        benhAnList.add(benhAnThuong);
-        benhAnList.add(benhAnThuong1);
+    public MedicalSerVice() {
+        benhAnList = fileHelper.readFileCSV(PATH);
     }
 
     public void addBenhAn(BenhAn benhAn) {
         benhAnList.add(benhAn);
         benhAnList.get(benhAnList.size() - 1).setStt(id++);
+        fileHelper.writeFileCSV(PATH,benhAnList,false);
     }
 
     public List<ThiModule.BenhAn.BenhAn> findAll() {
@@ -37,8 +35,8 @@ public class MedicalSerVice {
         for (BenhAn benhAn : benhAnList) {
             if (benhAn.getMaBenhAn().equals(Id)) {
                 System.out.println("Yes or no:");
-                boolean choose = Boolean.parseBoolean(scan.nextLine());
-                if (choose) {
+                String choose = scan.nextLine();
+                if (choose.equals("yes") || choose.equals("Yes")) {
                     benhAnList.remove(benhAn);
                     return;
                 } else {
@@ -50,6 +48,6 @@ public class MedicalSerVice {
     }
 
     private void listToCVS() throws IOException {
-        fileHelper.writeFileCSV("src\\ThiModule\\csvFile.csv", benhAnList, true);
+        fileHelper.writeFileCSV(PATH, benhAnList, true);
     }
 }

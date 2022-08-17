@@ -34,15 +34,15 @@ public class BenhAnVip extends BenhAn {
     @Override
     public String toString() {
         return "BenhAnVip{" +
-                "vip='" + vip + '\'' +
-                ", thoiHanVip='" + thoiHanVip + '\'' +
-                ", stt=" + stt +
+                "stt=" + stt +
                 ", maBenhAn='" + maBenhAn + '\'' +
                 ", maBenhNhan='" + maBenhNhan + '\'' +
                 ", name='" + name + '\'' +
                 ", dateNhapVien='" + dateNhapVien + '\'' +
                 ", dateRaVien='" + dateRaVien + '\'' +
                 ", lyDo='" + lyDo + '\'' +
+                ", vip='" + vip + '\'' +
+                ", thoiHanVip='" + thoiHanVip + '\'' +
                 '}';
     }
 }

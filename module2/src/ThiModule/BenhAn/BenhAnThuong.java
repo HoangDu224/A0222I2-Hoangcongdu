@@ -24,13 +24,13 @@ public class BenhAnThuong extends BenhAn {
     @Override
     public String toString() {
         return "BenhAnThuong{" +
-                "price=" + price +
-                ", stt=" + stt +
-                ", id=" + maBenhAn +
+                "stt=" + stt +
+                " id=" + maBenhAn +
                 ", name='" + name + '\'' +
                 ", dateNhapVien='" + dateNhapVien + '\'' +
                 ", dateRaVien='" + dateRaVien + '\'' +
                 ", lyDo='" + lyDo + '\'' +
+                ", price=" + price +
                 '}';
     }
 }

@@ -83,31 +83,29 @@ public class FileHelper {
 
     public List<BenhAn> readFileCSV(String path) {
         List<BenhAn> result = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
-            while (reader.readLine() != null) {
-                String[] arrLine = reader.readLine().split(",");
-                int stt = Integer.parseInt(arrLine[0]);
-                String maBenhAn = arrLine[1];
-                String maBenhNhan = arrLine[2];
-                String name = arrLine[3];
-                String dateNhapVien = arrLine[4];
-                String dataRaVien = arrLine[5];
-                String lydo = arrLine[6];
-                if (arrLine.length <= 7) {
-                    int price = Integer.parseInt(arrLine[7]);
-                    BenhAnThuong benhAnThuong = new BenhAnThuong(stt, maBenhAn, maBenhNhan, name, dateNhapVien, dataRaVien, lydo, price);
-                    result.add(benhAnThuong);
-                } else {
-                    String vip = arrLine[7];
-                    String thoiHanVip = arrLine[8];
-                    BenhAnVip benhAnVip = new BenhAnVip(stt, maBenhAn, maBenhNhan, name, dateNhapVien, dataRaVien, lydo, vip, thoiHanVip);
-                    result.add(benhAnVip);
-                }
-
+        List<String> line = read(path);
+        for (int i = 0; i < line.size(); i++) {
+            String[] arrLine = line.get(i).split(",");
+            int stt = Integer.parseInt(arrLine[0]);
+            String maBenhAn = arrLine[1];
+            String maBenhNhan = arrLine[2];
+            String name = arrLine[3];
+            String dateNhapVien = arrLine[4];
+            String dataRaVien = arrLine[5];
+            String lydo = arrLine[6];
+            if (arrLine.length <= 8) {
+                int price = Integer.parseInt(arrLine[7]);
+                BenhAnThuong benhAnThuong = new BenhAnThuong(stt, maBenhAn, maBenhNhan, name, dateNhapVien, dataRaVien, lydo, price);
+                result.add(benhAnThuong);
+            } else {
+                String vip = arrLine[7];
+                String thoiHanVip = arrLine[8];
+                BenhAnVip benhAnVip = new BenhAnVip(stt, maBenhAn, maBenhNhan, name, dateNhapVien, dataRaVien, lydo, vip, thoiHanVip);
+                result.add(benhAnVip);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         return result;
     }
+
 }
+

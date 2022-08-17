@@ -17,8 +17,11 @@ public class test {
         List<BenhAn> benhAnList = new ArrayList<>();
         benhAnList.add(benhAnThuong);
         benhAnList.add(benhAnThuong1);
-//        fileHelper.writeFileCSV("src\\ThiModule\\csvFile.csv",benhAnList,false);
-        List<BenhAn> readCsvFile = fileHelper.readFileCSV("src\\ThiModule\\csvFile.csv");
-        System.out.println(readCsvFile.toString());
+//        fileHelper.writeFileCSV("src\\ThiModule\\testfile.csv",benhAnList,false);
+        List<BenhAn> readCsvFile = fileHelper.readFileCSV("src\\ThiModule\\testfile.csv");
+        for (int i = 0 ; i<readCsvFile.size();i++){
+            System.out.print(readCsvFile.get(i)+"\n");
+
+        }
     }
 }
