@@ -6,20 +6,31 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "CalculatorServlet",value = "/calculator")
+@WebServlet(name = "CalculatorServlet", value = "/calculator")
 public class CalculatorServlet extends HttpServlet {
     static Calculator calculator = new Calculator();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        float firstOperator = Float.parseFloat(request.getParameter("firstOperator"));
-        float secondOperator = Float.parseFloat(request.getParameter("secondOperator"));
+        int firstOperator = Integer.parseInt(request.getParameter("firstOperator"));
+        int secondOperator = Integer.parseInt(request.getParameter("secondOperator"));
         String operator = request.getParameter("operator");
-        float result = calculator.calculate(firstOperator,secondOperator,operator);
-        request.setAttribute("result",result);
-        request.getRequestDispatcher("view\\result.jsp").forward(request,response);
-        request.setAttribute("firstOperator",firstOperator);
-        request.getRequestDispatcher("view\\result.jsp").forward(request,response);
-        request.setAttribute("secondOperator",secondOperator);
-        request.getRequestDispatcher("view\\result.jsp").forward(request,response);
+        boolean check = true;
+        float result = 0;
+        String message = null;
+        try {
+            result = calculator.calculate(firstOperator, secondOperator, operator);
+        } catch (ArithmeticException e) {
+            message = "Khong the chia cho 0";
+            check = false;
+        }
+        if (check) {
+            request.setAttribute("result", result);
+        } else {
+            request.setAttribute("result", message);
+        }
+        request.setAttribute("firstOperator", firstOperator);
+        request.setAttribute("secondOperator", secondOperator);
+        request.getRequestDispatcher("view\\result.jsp").forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

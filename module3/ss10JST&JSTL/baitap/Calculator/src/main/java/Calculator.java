@@ -1,5 +1,5 @@
 public class Calculator {
-    public float calculate(float a, float b, String operator) {
+    public int calculate(int a, int b, String operator) throws ArithmeticException {
         switch (operator) {
             case "+":
                 return a + b;
@@ -11,7 +11,7 @@ public class Calculator {
                 try {
                     return a / b;
                 } catch (ArithmeticException e) {
-                    System.out.println("Khong the chia cho 0");
+                    throw new ArithmeticException();
 
                 }
 
