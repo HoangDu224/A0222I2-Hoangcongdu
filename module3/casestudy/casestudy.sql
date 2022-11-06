@@ -338,5 +338,5 @@ join hop_dong_chi_tiet hdct on h.ma_hop_dong = hdct.ma_hop_dong
 join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
 join dich_vu dv on h.ma_dich_vu = dv.ma_dich_vu
 where ((dv.chi_phi_thue + hdct.so_luong*dvdk.gia) >10000000) and (year(h.ngay_lam_hop_dong) = 2021)
-group by k.ma_khach_hang
+group by k.ma_khach_hang;
 
