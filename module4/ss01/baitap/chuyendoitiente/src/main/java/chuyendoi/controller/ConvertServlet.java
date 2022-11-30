@@ -15,7 +15,7 @@ public class ConvertServlet {
     }
 
     @PostMapping("/convert")
-    public String displayResult(Model model, @RequestParam("usd") String usd) {
+    public String displayResult(Model model, @RequestParam(value = "usd",defaultValue = "0") String usd) {
         float vnd = Integer.parseInt(usd) * 24000;
         model.addAttribute("vnd", vnd);
         return "home";

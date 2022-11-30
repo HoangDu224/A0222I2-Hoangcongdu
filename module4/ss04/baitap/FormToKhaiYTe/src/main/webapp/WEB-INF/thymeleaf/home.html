@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border: inherit;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center">Tờ Khai Y Tế</h1>
+<h3 style="text-align: center">Đây là tài liệu quan trọng, Thông Tin của anh chị sẽ giúp cơ quan y tế liên lạc khi cần
+    thiết để phòng chống dịch
+    bệnh truyền nhiễm</h3>
+<h5 style="text-align: center"> Khuyến cáo : khai báo thông tin sai là vi phạm pháp luật Việt Nam và có thể xử lý hình
+    sự</h5>
+<form th:action="@{/add}" method="post" th:object="${form}">
+    <label>Họ tên (Ghi chữ in HOA)(*)</label>
+    <input type="text" th:field="${form.hoTen}"><br>
+    <label>Năm sinh(*)</label>
+    <input type="text" th:field="${form.namSinh}">
+    <label>Giới Tính(*)</label>
+    <input type="text" th:field="${form.gioiTinh}">
+    <label>Quốc tịch(*)</label>
+    <input type="text" th:field="${form.quocTich}"><br>
+    <label>Số hộ chiếu hoặc CMND (*)</label>
+    <input type="text" th:field="${form.soCMND}"><br>
+    <label>Thông Tin Đi Lai</label><br>
+    <input type="radio" th:field="${form.diChuyen}" th:value="Ô tô">Ô Tô
+    <input type="radio" th:field="${form.diChuyen}" th:value="Tàu">Tàu
+    <input type="radio" th:field="${form.diChuyen}" th:value="Đi bộ">Đi Bộ<br>
+    <label>Số hiệu phương tiện</label>
+    <input type="text">
+    <label>Số ghế</label>
+    <input type="text"><br>
+    <label>Ngày Khởi Hành</label>
+    <input type="date">
+    <label>Ngày Kết Thúc</label>
+    <input type="date"><br>
+    <label>Trong 14 ngày qua , Anh chị có đến thành phố nào?(*)</label>
+    <input type="text"><br>
+    <label>Địa Chỉ Liên Lạc</label><br>
+    <label>Tỉnh/Thành(*)</label>
+    <select>
+        <option>-Chọn-</option>
+        <option>Đà nẵng</option>
+        <option>Hà Nội</option>
+    </select>
+    <label>Quận huyện(*)</label>
+    <select>
+        <option>-Chọn-</option>
+        <option>Cẩm Lệ</option>
+        <option>Thanh Khê</option>
+    </select>
+    <label>Phường Xã(*)</label>
+    <select>
+        <option>-Chọn-</option>
+        <option>Hòa xuân</option>
+        <option>Hòa Vang</option>
+    </select><br>
+    <label>Địa Chỉ nơi ở</label><br>
+    <input type="text"><br>
+    <label>Email</label><br>
+    <input type="text"><br>
+    <label>Trong 14 ngày qua , anh/chị có xuất hiện dấu hiệu nào sau đây không?(*)</label><br>
+    <table border="1">
+        <tr>
+            <th>Triệu chứng</th>
+            <th>Có</th>
+            <th>Không</th>
+            <th>Triệu chứng</th>
+            <th>Có</th>
+            <th>Không</th>
+        </tr>
+        <tr>
+            <td>Sốt</td>
+            <td><input type="radio" name="sot"></td>
+            <td><input type="radio" name="sot"></td>
+            <td>Nôn/buồn nôn</td>
+            <td><input type="radio" name="non"></td>
+            <td><input type="radio" name="non"></td>
+        </tr>
+        <tr>
+            <td>Ho</td>
+            <td><input type="radio" name="ho"></td>
+            <td><input type="radio" name="ho"></td>
+            <td>Tiêu Chảy</td>
+            <td><input type="radio" name="tieuchay"></td>
+            <td><input type="radio" name="tieuchay"></td>
+        </tr>
+        <tr>
+            <td>Khó Thở</td>
+            <td><input type="radio" name="khotho"></td>
+            <td><input type="radio" name="khotho"></td>
+            <td>Xuất huyết ngoài da</td>
+            <td><input type="radio" name="xuathuyet"></td>
+            <td><input type="radio" name="xuathuyet"></td>
+        </tr>
+        <tr>
+            <td>Đau họng</td>
+            <td><input type="radio" name="dauhong"></td>
+            <td><input type="radio" name="dauhong"></td>
+            <td>Nổi ban ngoài da</td>
+            <td><input type="radio" name="noiban"></td>
+            <td><input type="radio" name="noiban"></td>
+        </tr>
+    </table>
+    <button type="submit" value="Gửi tờ khai">Gửi Tờ Khai</button>
+</form>
+</body>
+</html>
