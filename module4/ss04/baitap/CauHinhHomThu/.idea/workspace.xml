@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9722299-750e-401b-bf10-6dd36f697d4e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../module2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/File_Helper/FileHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/File_Helper/FileHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/META-INF/module2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/BenhAn/BenhAnThuong.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/BenhAn/BenhAnThuong.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/Menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/Menu/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/Regex/Regex.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/Regex/Regex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/Service/MedicalSerVice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/Service/MedicalSerVice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/testfile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/ThiModule/testfile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/ss01_introduction_to_java/excercise/Hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/ss01_introduction_to_java/excercise/Hello.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/ss11StackQueue/excercise/CountChar/CountCharacter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/ss11StackQueue/excercise/CountChar/CountCharacter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/out/production/module2/ss16IOfile/excercise/CopyFileText/CopyAndPaste.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/out/production/module2/ss16IOfile/excercise/CopyFileText/CopyAndPaste.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/src/File_Helper/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/src/File_Helper/FileHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/src/ThiModule/BenhAn/BenhAnThuong.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/src/ThiModule/BenhAn/BenhAnThuong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/src/ThiModule/Menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/src/ThiModule/Menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/src/ThiModule/Regex/Regex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/src/ThiModule/Regex/Regex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/src/ThiModule/Service/MedicalSerVice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/src/ThiModule/Service/MedicalSerVice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/src/ThiModule/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/src/ThiModule/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/src/ThiModule/testfile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/src/ThiModule/testfile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/src/ss01_introduction_to_java/excercise/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/src/ss01_introduction_to_java/excercise/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module2/src/ss16IOfile/excercise/CopyFileText/CopyAndPaste.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module2/src/ss16IOfile/excercise/CopyFileText/CopyAndPaste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/Controller/UserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/META-INF/baitap.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/Model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/Repository/BaseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/Repository/IUserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/Repository/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/lib/mysql-connector-java-8.0.28.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/lib/protobuf-java-3.11.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/view/hienthi.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/view/them.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/apache-tomcat-9.0.68/apache-tomcat-9.0.68/webapps/ROOT/view/xoa.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/ss12JDBC&amp;CRUD/demo.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module3/ss12JDBC&amp;CRUD/demo.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss01/thuchanh/QuanLyKhachHang/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss01/thuchanh/QuanLyKhachHang/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/scan/config/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/scan/config/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/scan/controller/ConfigController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/scan/model/UserConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/scan/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/CauHinhHomThu-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scan/config/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scan/config/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scan/controller/ConfigController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scan/model/UserConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scan/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/setting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/thymeleaf/user.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/CauHinhHomThu">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2IUYOVtGoOR7ne8Xanj79I8TcPi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CauHinhHomThu" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9722299-750e-401b-bf10-6dd36f697d4e" name="Default Changelist" comment="" />
+      <created>1670237596689</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670237596689</updated>
+      <workItem from="1670237598064" duration="59000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1670237654966">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1670237654966" />
+  </component>
+</project>

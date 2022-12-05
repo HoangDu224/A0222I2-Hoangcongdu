@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Settings</h1>
+<form method="post" th:action="@{/user/Update}" th:object="${userConfig}">
+    <input type="text" th:field="*{id}" hidden>
+    <input type="text" th:field="*{name}" hidden>
+    <label>Languages</label>
+    <select th:field="*{language}">
+        <option value="English">English</option>
+        <option value="Vietnamese">Vietnamese</option>
+    </select><br>
+    <label>Page size</label>
+    <span>Show <select th:field="*{pageSize}">
+        <option value="25">25</option>
+        <option value="24">24</option>
+        <option value="23">23</option> email per page
+    </select></span><br>
+    <label>Spams filter</label>
+    <input type="checkbox" th:field="*{spamFilter}" >Email spams filter<br>
+    <label>Signature</label>
+    <input type="text" th:field="*{signature}"><br>
+    <button type="submit">Update</button>
+    <button ><a th:href="@{/user/Display}">Cancel</a></button>
+</form>
+
+</body>
+</html>
