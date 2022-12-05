@@ -27,9 +27,8 @@ public class MusicController {
         return "upLoadMusic";
     }
     @PostMapping("/upLoad")
-    public String saveMusic(@ModelAttribute("music")Music music, RedirectAttributes redirectAttributes){
+    public String saveMusic(@ModelAttribute("music")Music music){
         musicRepository.save(music);
-//        redirectAttributes.addFlashAttribute("msg"," Thêm mới thành công");
         return "redirect:/display";
     }
 }

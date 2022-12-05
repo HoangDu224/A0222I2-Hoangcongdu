@@ -18,7 +18,9 @@
     <label>Ten ca si</label><br>
     <form:input path="caSi" type="text" /><br>
     <label>The Loai</label><br>
-    <form:input path="theLoai" type="text" /><br>
+    <form:checkbox path="theLoai" value="TheLoai1"/>TheLoai1
+    <form:checkbox path="theLoai" value="TheLoai2"/>TheLoai2
+    <form:checkbox path="theLoai" value="TheLoai3"/>TheLoai3<br>
     <label>Linkfile</label><br>
     <form:input path="linkFile" type="text" /><br>
     <button type="submit">Update</button>
