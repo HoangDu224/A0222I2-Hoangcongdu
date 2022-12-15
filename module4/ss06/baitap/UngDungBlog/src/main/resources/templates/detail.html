@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/home}">Return</a><br>
+<form th:object="${Blog}">
+    <label>Title</label><br>
+    <b th:text="*{title}"></b><br>
+    <label>Content</label><hr>
+    <p th:text="*{content}"></p><br>
+</form>
+</body>
+</html>

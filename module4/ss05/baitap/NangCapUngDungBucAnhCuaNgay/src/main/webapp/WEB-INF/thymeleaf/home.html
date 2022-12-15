@@ -21,7 +21,7 @@
 </form>
 <br>
 <table>
-    <tr th:each="u , iter : ${userList}" th:object="${u}">
+    <tr th:each="u , iter : ${userList}" th:object="u">
         <b th:text="${u.comment}"></b><br>
         <span th:text="${u.love}+ likes"></span>
         <a th:href="@{/user/updatelike/{id}(id=*{id})}">Like</a>
