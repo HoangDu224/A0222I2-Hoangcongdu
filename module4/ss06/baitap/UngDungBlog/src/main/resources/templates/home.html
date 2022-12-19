@@ -6,15 +6,14 @@
 </head>
 <body>
 <button><a th:href="@{/create}">Create</a></button>
+<button><a th:href="@{/}">Return</a></button>
 <table border="1">
     <tr>
         <th>Title</th>
-        <th>Content</th>
         <th>Action</th>
     </tr>
     <tr th:each="u, iterStat: ${list}" th:object="${u}">
         <td th:text="*{title}"></td>
-        <td th:text="*{content}"></td>
         <td><button><a th:href="@{/edit/{id}(id=*{id})}">Edit</a></button></td>
         <td><button><a th:href="@{/delete/{id}(id=*{id})}">Delete</a></button></td>
         <td><button><a th:href="@{/detail/{id}(id=*{id})}">Detail</a></button></td>

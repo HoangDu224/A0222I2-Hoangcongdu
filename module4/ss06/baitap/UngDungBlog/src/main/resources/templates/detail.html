@@ -7,9 +7,11 @@
 <body>
 <a th:href="@{/home}">Return</a><br>
 <form th:object="${Blog}">
+    <label>Catagory</label><br>
+    <b th:text="*{category.nameCategory}"></b><br>
     <label>Title</label><br>
     <b th:text="*{title}"></b><br>
-    <label>Content</label><hr>
+    <hr>
     <p th:text="*{content}"></p><br>
 </form>
 </body>

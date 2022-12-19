@@ -1,7 +1,9 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Blog;
+import com.example.demo.model.Category;
 import com.example.demo.service.BlogService;
+import com.example.demo.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,21 +18,23 @@ public class BlogController {
 
     @Autowired
     BlogService blogService;
-
-    @GetMapping({"","home"})
+    @Autowired
+    CategoryService categoryService;
+    @GetMapping({"home"})
     public String displayBlog(Model model){
         model.addAttribute("list",blogService.findAll());
         return "home";
     }
     @GetMapping("create")
     public String showCreate(Model model){
+        model.addAttribute("category",categoryService.findAll());
         model.addAttribute("Blog",new Blog());
         return "create";
     }
     @PostMapping("create")
-    public String doCreate(@Valid @ModelAttribute("Blog")Blog blog, BindingResult bindingResult,Model model){
+    public String doCreate(@Valid @ModelAttribute("Blog")Blog blog){
         blogService.add(blog);
-        return "redirect:/home";
+        return "redirect:/category";
     }
     @GetMapping("edit/{id}")
     public String showEdit(@PathVariable("id")int id, Model model){
@@ -52,6 +56,27 @@ public class BlogController {
          model.addAttribute("Blog",blogService.findById(id));
          return "detail";
 
+    }
+    @GetMapping({"","category"})
+    public String displayCategory(Model model){
+        model.addAttribute("category", new Category());
+        model.addAttribute("categoryList",categoryService.findAll());
+        return "category";
+    }
+    @PostMapping({"createCategory"})
+    public String createCategory(@ModelAttribute("category")Category category,Model model){
+        categoryService.add(category);
+        return "redirect:category";
+    }
+    @GetMapping("showCategory/{id}")
+    public String showCategory(@PathVariable("id")int id ,Model model){
+        model.addAttribute("list",blogService.findBlogByIdCategory(id));
+        return "home";
+    }
+    @GetMapping("deleteCategory/{id}")
+    public String deleteCategory(@PathVariable("id") int id){
+        categoryService.delete(id);
+        return "redirect:category";
     }
 
 }

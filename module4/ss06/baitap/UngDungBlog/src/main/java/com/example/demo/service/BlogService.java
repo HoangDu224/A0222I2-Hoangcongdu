@@ -14,4 +14,5 @@ public interface BlogService {
     void add(Blog blog);
     void update(Blog blog);
     void delete(int id);
+    List<Blog> findBlogByIdCategory(int id);
 }

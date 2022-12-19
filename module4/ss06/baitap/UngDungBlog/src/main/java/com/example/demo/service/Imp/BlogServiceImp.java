@@ -36,4 +36,9 @@ public class BlogServiceImp implements BlogService {
     public void delete(int id) {
         blogRepository.deleteById(id);
     }
+
+    @Override
+    public List<Blog> findBlogByIdCategory(int id) {
+        return blogRepository.findByCategory_Id(id);
+    }
 }

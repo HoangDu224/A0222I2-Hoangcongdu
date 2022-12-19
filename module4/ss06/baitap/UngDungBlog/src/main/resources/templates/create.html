@@ -6,12 +6,17 @@
 </head>
 <body>
 <a th:href="@{/home}">Return</a><br>
-<form th:action="@{blog/create}" method="post" th:object="${Blog}">
+<form th:action="@{/create}" method="post" th:object="${Blog}">
     <label>Title</label><br>
     <input type="text" th:field="*{title}"><br>
     <label>Content</label><br>
     <textarea type="text" th:field="*{content}"></textarea><br>
-    <button type="submit" value="Create">Create</button>
+    <label>Catagory</label>
+    <select th:field="*{category}">
+        <option th:each="cate : ${category}" th:value="${cate.id}" th:text="${cate.nameCategory}">
+        </option>
+    </select>
+    <button type="submit">Create</button>
 </form>
 </body>
 </html>

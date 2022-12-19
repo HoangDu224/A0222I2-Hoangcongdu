@@ -9,8 +9,19 @@ public class Blog {
     private int id;
     private String title;
     private String content;
+    @ManyToOne
+    @JoinColumn(name = "idCategory")
+    Category category;
 
     public Blog() {
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public Blog(int id, String title, String content) {
