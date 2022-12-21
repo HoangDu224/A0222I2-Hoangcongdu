@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button><a th:href="@{/create}">CREATE</a></button>
+<table border="1">
+    <tr>
+        <td>Id</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>Email</td>
+    </tr>
+    <tr th:each="user , iterStat :${list}" th:object="${user}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{firstName}"></td>
+        <td th:text="*{lastName}"></td>
+        <td th:text="*{age}"></td>
+        <td th:text="*{email}"></td>
+    </tr>
+</table>
+</body>
+</html>
