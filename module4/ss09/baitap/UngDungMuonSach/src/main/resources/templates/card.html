@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button><a th:href="@{/display}">Return</a></button>
+<button><a th:href="@{/book/trasach}">Tra Sach</a></button>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>Name</td>
+    </tr>
+    <tr th:each="card , iterStat: ${card}" th:object="${card}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{books.name}"></td>
+    </tr>
+</table>
+</body>
+</html>

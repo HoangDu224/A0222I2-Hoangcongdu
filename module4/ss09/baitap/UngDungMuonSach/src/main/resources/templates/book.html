@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/book/danhsach}">Danh Sach Muon</a>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>So luong</td>
+        <td>Action</td>
+    </tr>
+    <tr th:each="book , iterStat: ${listBook}" th:object="${book}">
+        <td th:text="*{name}"></td>
+        <td th:text="*{quantity}"></td>
+        <td ><a th:href="@{muon/{id}(id=*{id})}">Muon Sach</a></td>
+    </tr>
+</table>
+</body>
+</html>

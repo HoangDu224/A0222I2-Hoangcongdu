@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/muon}" method="post" th:object="${card}" >
+    <label>Id Muon Sach</label><br>
+    <input th:field="*{id}" readonly="true" ><br>
+    <label>Id book</label><br>
+    <select th:field="*{books}">
+    <option th:each="sach : ${sach}" th:value="${sach.id}" th:text="${sach.id}">
+    </option></select><br>
+    <label>Name Book</label><br>
+    <input th:value="${sach.name}"  readonly="true" ><br>
+    <input type="submit" value="Muon">
+    <button><a th:href="@{/display}">Cancel</a></button>
+</form>
+</body>
+</html>

@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -19,6 +20,7 @@ public class AppsUser {
     private String lastName;
     @Min(value = 18 , message = "{age.validate}")
     private int age;
+//    @Pattern(regexp = "^[\\w\\d]*@[\\w\\d]+(\\.[\\w\\d])+$",message = "{email.validate}")
     @Email(message = "{email.validate}")
     private String email;
 

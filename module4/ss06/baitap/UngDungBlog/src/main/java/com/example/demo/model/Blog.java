@@ -30,6 +30,7 @@ public class Blog {
         this.content = content;
     }
 
+
     public int getId() {
         return id;
     }

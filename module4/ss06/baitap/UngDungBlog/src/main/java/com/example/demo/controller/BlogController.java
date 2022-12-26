@@ -64,7 +64,7 @@ public class BlogController {
         return "category";
     }
     @PostMapping({"createCategory"})
-    public String createCategory(@ModelAttribute("category")Category category,Model model){
+    public String createCategory(@ModelAttribute("category")Category category){
         categoryService.add(category);
         return "redirect:category";
     }

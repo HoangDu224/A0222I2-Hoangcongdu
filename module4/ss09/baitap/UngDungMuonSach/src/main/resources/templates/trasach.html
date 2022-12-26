@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tra sach</h2>
+<form th:action="@{/trasach}" method="post">
+    <label>Nhap ma tra sach</label>
+    <input type="text" name="idTraSach">
+    <button type="submit" value="TraSach">Tra Sach</button>
+    <button><a th:href="@{/display}">Return</a></button>
+</form>
+</body>
+</html>
