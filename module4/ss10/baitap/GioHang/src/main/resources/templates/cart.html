@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<a th:href="@{/display}">Return shop</a>
 <h2>Cart</h2>
 <h3>List product in  cart</h3>
 <form th:object="${cart}">
@@ -17,13 +18,13 @@
         <th>Quantity</th>
         <th>Price</th>
     </tr>
-    <tr th:each="product: ${cart.findAll()}">
-        <td th:text="${product.name}"></td>
-        <td th:text="1"></td>
-        <td th:text="${product.price}"></td>
+    <tr th:each="product: ${cart.productIntegerMap}">
+        <td th:text="${product.getKey().name}"></td>
+        <td th:text="${product.getValue()}"></td>
+        <td th:text="${product.getKey().price}"></td>
     </tr>
     <tr>
-        <td>Total price</td>
+        <td>Total</td>
         <td></td>
         <td th:text="${cart.countPrice()}"></td>
     </tr>
