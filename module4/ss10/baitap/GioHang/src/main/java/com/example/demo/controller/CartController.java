@@ -6,15 +6,14 @@ import com.example.demo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-@RequestMapping("cart")
+@RequestMapping("/cart")
 public class CartController {
 //    @ModelAttribute("cart")
 //    public Cart setupCart() {
@@ -32,5 +31,15 @@ public class CartController {
     public String addProduct(@PathVariable("id") int id){
         cart.addProduct(productService.findById(id));
         return "redirect:/display";
+    }
+    @GetMapping("/changeQuantity")
+    public String changeQuantity(@RequestParam("id")int id, @RequestParam("action") String action){
+        Product product = productService.findById(id);
+        if (action.equals("decrease")){
+            cart.decreaseProductQuantity(product);
+        }else {
+            cart.increaseProductQuantity(product);
+        }
+        return "redirect:/cart/Show-Cart";
     }
 }

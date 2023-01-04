@@ -70,5 +70,16 @@ public class Cart {
     public int countProduct() {
         return productIntegerMap.size();
     }
+    public void increaseProductQuantity(Product product){
+            Map.Entry<Product,Integer> itemEntry = selectItemInCart(product);
+            int quantity = itemEntry.getValue()+1;
+            productIntegerMap.replace(itemEntry.getKey(),quantity);
+    }
+    public int decreaseProductQuantity(Product product){
+        Map.Entry<Product,Integer> itemEntry = selectItemInCart(product);
+        int quantity = itemEntry.getValue()-1;
+        productIntegerMap.replace(itemEntry.getKey(),quantity);
+        return quantity;
+    }
 
 }

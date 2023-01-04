@@ -7,10 +7,10 @@
 <body>
 <a th:href="@{/display}">Return shop</a>
 <h2>Cart</h2>
-<h3>List product in  cart</h3>
-<form th:object="${cart}">
-    <h3>Total Items: <span th:text="${cart.countQuantity()}"></span></h3>
-    <h3>Total Products: <span th:text="${cart.countProduct()}"></span></h3>
+<h3>List product in cart</h3>
+<p th:object="${cart}">
+<h3>Total Items: <span th:text="${cart.countQuantity()}"></span></h3>
+<h3>Total Products: <span th:text="${cart.countProduct()}"></span></h3>
 
 <table border="1">
     <tr>
@@ -20,15 +20,21 @@
     </tr>
     <tr th:each="product: ${cart.productIntegerMap}">
         <td th:text="${product.getKey().name}"></td>
-        <td th:text="${product.getValue()}"></td>
+        <td>
+
+            <a th:if="${product.getValue()>0}" th:href="@{/cart/changeQuantity(id=*{product.getKey().id},action='decrease')}">-</a>
+            <span th:text="${product.getValue()}"></span>
+            <a th:href="@{/cart/changeQuantity(id=*{product.getKey().id},action='increase')}">+</a>
+        </td>
         <td th:text="${product.getKey().price}"></td>
     </tr>
+    </form>
     <tr>
         <td>Total</td>
         <td></td>
         <td th:text="${cart.countPrice()}"></td>
     </tr>
 </table>
-</form>
+</p>
 </body>
 </html>
