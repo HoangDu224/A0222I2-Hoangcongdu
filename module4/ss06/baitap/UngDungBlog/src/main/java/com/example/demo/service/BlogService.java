@@ -15,4 +15,5 @@ public interface BlogService {
     void update(Blog blog);
     void delete(int id);
     List<Blog> findBlogByIdCategory(int id);
+    List<Blog> findBlogByTitleContaining(String title);
 }

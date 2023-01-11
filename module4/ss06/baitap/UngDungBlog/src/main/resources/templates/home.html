@@ -1,23 +1,99 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <button><a th:href="@{/create}">Create</a></button>
 <button><a th:href="@{/}">Return</a></button>
+<br>
+
+<input type="text" id="blogname"><br>
+<button onclick="findByName();">Search Blog</button>
+
 <table border="1">
     <tr>
         <th>Title</th>
         <th>Action</th>
     </tr>
+    <tbody id="result">
     <tr th:each="u, iterStat: ${list}" th:object="${u}">
         <td th:text="*{title}"></td>
-        <td><button><a th:href="@{/edit/{id}(id=*{id})}">Edit</a></button></td>
-        <td><button><a th:href="@{/delete/{id}(id=*{id})}">Delete</a></button></td>
-        <td><button><a th:href="@{/detail/{id}(id=*{id})}">Detail</a></button></td>
+        <td>
+            <button><a th:href="@{/edit/{id}(id=*{id})}">Edit</a></button>
+            <button><a th:href="@{/delete/{id}(id=*{id})}">Delete</a></button>
+            <button><a th:href="@{/detail/{id}(id=*{id})}">Detail</a></button>
+        </td>
     </tr>
+    </tbody>
 </table>
+<script>
+    function findByName() {
+        let blogName = $("#blogname").val();
+        console.log(blogName)
+        $.ajax({
+            url: "http://localhost:8080/restBlog/searchBlog",
+            data: {
+                name: blogName
+            },
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                let result = '';
+                for (let i = 0; i < data.length; i++) {
+                    result += `
+                 <tr>
+                        <td>
+                                ${data[i].title}
+                        </td>
+                        <td>
+                                <button onclick="deleteBlogAjax()" id="deleteId" value="${data[i].id}">Delete</button>
+
+                        </td>
+                  </tr>
+                `;
+                }
+                $("#result").html(result);
+            },
+            error: function (e) {
+
+            }
+        });
+    }
+
+    function deleteBlogAjax() {
+        let deleteId = $("#deleteId").val();
+        console.log(deleteId)
+        $.ajax({
+            url: "http://localhost:8080/restBlog/deleteBlog",
+            data: {
+                name: deleteId
+            },
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                let result = '';
+                for (let i = 0; i < data.length; i++) {
+                    result += `
+                 <tr>
+                        <td>
+                                ${data[i].title}
+                        </td>
+                        <td>
+                            <button onclick="deleteBlogAjax()" id="deleteId" value="${data[i].id}"><a >Edit</a></button>
+                        </td>
+                  </tr>
+                `;
+                }
+                $("#result").html(result);
+            },
+            error: function (e) {
+
+            }
+        });
+    }
+</script>
 </body>
 </html>

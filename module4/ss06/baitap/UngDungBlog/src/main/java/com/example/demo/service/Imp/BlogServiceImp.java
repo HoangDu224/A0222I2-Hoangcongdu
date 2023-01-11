@@ -41,4 +41,10 @@ public class BlogServiceImp implements BlogService {
     public List<Blog> findBlogByIdCategory(int id) {
         return blogRepository.findByCategory_Id(id);
     }
+
+    @Override
+    public List<Blog> findBlogByTitleContaining(String title) {
+        return blogRepository.findBlogByTitleContaining(title);
+    }
+
 }

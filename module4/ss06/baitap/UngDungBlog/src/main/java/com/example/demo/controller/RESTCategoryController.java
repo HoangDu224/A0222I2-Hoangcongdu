@@ -33,4 +33,6 @@ public class RESTCategoryController {
     public ResponseEntity<List<Blog>> getBlogOfCategory(@PathVariable("id")int id ){
         return new ResponseEntity<>(blogService.findBlogByIdCategory(id),HttpStatus.OK);
     }
+//    @GetMapping("/searchBlog")
+//    public ResponseEntity<List<Blog>> searchBlog()
 }

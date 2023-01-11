@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping({"","blog"})
+@RequestMapping({""})
 public class BlogController {
 
     @Autowired
@@ -42,14 +42,14 @@ public class BlogController {
         return "edit";
     }
     @PostMapping("edit")
-    public String doEdit(@Valid @ModelAttribute("Blog")Blog blog ,BindingResult bindingResult){
+    public String doEdit(@Valid @ModelAttribute("Blog")Blog blog){
         blogService.update(blog);
-        return "redirect:/home";
+        return "redirect:/category";
     }
     @GetMapping("delete/{id}")
     public String doDelete(@PathVariable("id")int id ){
         blogService.delete(id);
-        return "redirect:/home";
+        return "redirect:/category";
     }
     @GetMapping("detail/{id}")
     public String showDetail(@PathVariable("id")int id , Model model){
@@ -64,9 +64,13 @@ public class BlogController {
         return "category";
     }
     @PostMapping({"createCategory"})
-    public String createCategory(@ModelAttribute("category")Category category){
-        categoryService.add(category);
-        return "redirect:category";
+    public String createCategory(@Valid@ModelAttribute("category")Category category,BindingResult bindingResult,Model model){
+        if (bindingResult.hasErrors()){
+            model.addAttribute("categoryList",categoryService.findAll());
+            return "category";
+        }
+            categoryService.add(category);
+            return "redirect:category";
     }
     @GetMapping("showCategory/{id}")
     public String showCategory(@PathVariable("id")int id ,Model model){
@@ -74,9 +78,9 @@ public class BlogController {
         return "home";
     }
     @GetMapping("deleteCategory/{id}")
-    public String deleteCategory(@PathVariable("id") int id){
-        categoryService.delete(id);
-        return "redirect:category";
+    public String deleteCategory(@PathVariable("id") String id){
+        categoryService.delete(Integer.parseInt(id));
+        return "redirect:/category";
     }
 
 }

@@ -7,9 +7,9 @@
 <body>
 <form th:action="@{/createCategory}" method="post" th:object="${category}">
     <input th:field="*{nameCategory}"><br>
+    <span style="color: red" th:if="${#fields.hasErrors('nameCategory')}" th:errors="*{nameCategory}"></span><br>
     <button type="submit">AddCategory</button>
 </form>
-
 <table>
     <tr th:each="lists :${categoryList}" th:object="${lists}">
         <td><a th:href="@{/showCategory/{id}(id=*{id})}" th:text="*{nameCategory}"></a></td>

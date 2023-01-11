@@ -19,8 +19,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
-
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
 }
 
 tasks.named('test') {
