@@ -6,12 +6,12 @@ import java.util.regex.Pattern;
 
 public class Regex {
     Scanner scanner = new Scanner(System.in);
-    public static final String DAY_REGEX = "^([0-2][0-9]|3[0|1])[-|/|.](\\d|1[0|2])[-|/]\\d{4}$";
+    public static final String DAY_REGEX = "^([0-2][0-9]|3[0|1])[-|/|.](\\d|1[0|1|2])[-|/]\\d{4}$";
     public static final String PHONE_REGEX = "^[\\d]*$";
     public static final String BN_REGEX = "^[B][N][-][\\d]{3}$";
     public static final String BA_REGEX = "^[B][A][-][\\d]{3}$";
     public static final String NAME_REGEX = "^[A-Z]{1,}[a-z]*[ ][A-Z]{1,}[a-z]*[$|[ ]]";
-
+    public static final String STK_REGEX = "^[S][T][K][-][\\d]{4}$";
     public Regex() {
     }
     public String regexSTR(String strCheck, String strRegex, String error) {
@@ -32,8 +32,17 @@ public class Regex {
     public String checkBA(String strBA){
         return regexSTR(strBA,BA_REGEX,"Nhap sai:");
     }
+    public String checkSTK(String strSTK){
+        return regexSTR(strSTK,STK_REGEX,"Nhap sai:");
+    }
     public String checkDate(String strDate){
         return regexSTR(strDate , DAY_REGEX,"Nhap sai:");
+    }
+    public boolean checkSpace(String str){
+        if (str.trim().equals("")){
+            return false;
+        }
+        return true;
     }
 }
 

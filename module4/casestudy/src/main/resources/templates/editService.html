@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/service/editService}" method="post" th:object="${service}">
+    <input th:field="*{serviceId}" hidden>
+    <label>Service Name</label><br>
+    <input th:field="*{serviceName}" type="text"><br>
+    <label>serviceArea</label><br>
+    <input th:field="*{serviceArea}" type="text"><br>
+    <label>serviceMaxPeople</label><br>
+    <input th:field="*{serviceMaxPeople}" type="text"><br>
+    <label>stardardRoom</label><br>
+    <input th:field="*{stardardRoom}" type="text"><br>
+    <label>decription</label><br>
+    <input th:field="*{decription}" type="text"><br>
+    <label>poolArea</label><br>
+    <input th:field="*{poolArea}" type="text"><br>
+    <label>numberFloor</label><br>
+    <input th:field="*{numberFloor}" type="text"><br>
+    <button type="submit" >CREATE</button>
+    <button><a th:href="@{/service}">CANCEL</a></button>
+</form>
+</body>
+</html>

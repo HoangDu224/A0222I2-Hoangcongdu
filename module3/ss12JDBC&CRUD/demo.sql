@@ -16,3 +16,5 @@ select * from users;
 update users
 set name = 'hai' , email = 'ba@gmail.com' ,country = 'bali'
 where id = 2;
+select * from users order by name;
+select * from users where country like 'vie%';

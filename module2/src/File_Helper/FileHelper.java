@@ -13,7 +13,7 @@ public class FileHelper {
     private static final String NEW_LINE_SEPARATOR = "\n";
     private static final String FILE_HEADER = "stt,Ma benh an ,Ma benh nhan , name ,date nhap vien , date ra vien , ly do";
 
-    public List<String> read(String path) {
+    public static List<String> read(String path) {
         List<String> result = new ArrayList<String>();
 
         try {
@@ -38,7 +38,7 @@ public class FileHelper {
         return result;
     }
 
-    public void write(String path, List<BenhAn> benhAnList, boolean isAppend) throws IOException {
+    public static void write(String path, List<BenhAn> benhAnList, boolean isAppend) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(path, isAppend))) {
             for (int i = 0; i < benhAnList.size(); i++) {
                 writer.write(benhAnList.get(i).toString());
@@ -49,7 +49,7 @@ public class FileHelper {
         }
     }
 
-    public void writeFileCSV(String path, List<BenhAn> benhAnList, boolean isAppend) {
+    public static void writeFileCSV(String path, List<BenhAn> benhAnList, boolean isAppend) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(path, isAppend))) {
             for (BenhAn benhAn : benhAnList) {
                 writer.append(String.valueOf(benhAn.getStt()));
@@ -81,7 +81,7 @@ public class FileHelper {
         }
     }
 
-    public List<BenhAn> readFileCSV(String path) {
+    public static List<BenhAn> readFileCSV(String path) {
         List<BenhAn> result = new ArrayList<>();
         List<String> line = read(path);
         for (int i = 0; i < line.size(); i++) {
@@ -94,7 +94,7 @@ public class FileHelper {
             String dataRaVien = arrLine[5];
             String lydo = arrLine[6];
             if (arrLine.length <= 8) {
-                int price = Integer.parseInt(arrLine[7]);
+                double price = Double.parseDouble(arrLine[7]);
                 BenhAnThuong benhAnThuong = new BenhAnThuong(stt, maBenhAn, maBenhNhan, name, dateNhapVien, dataRaVien, lydo, price);
                 result.add(benhAnThuong);
             } else {

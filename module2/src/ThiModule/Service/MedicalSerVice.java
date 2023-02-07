@@ -7,10 +7,11 @@ import ThiModule.Exception.NotFoundMedicalRecordException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-public class MedicalSerVice {
+public class MedicalSerVice{
     Scanner scan = new Scanner(System.in);
     private static FileHelper fileHelper = new FileHelper();
     public static List<BenhAn> benhAnList = new ArrayList<>();
@@ -24,7 +25,6 @@ public class MedicalSerVice {
     public void addBenhAn(BenhAn benhAn) {
         benhAnList.add(benhAn);
         benhAnList.get(benhAnList.size() - 1).setStt(id++);
-        fileHelper.writeFileCSV(PATH,benhAnList,false);
     }
 
     public List<ThiModule.BenhAn.BenhAn> findAll() {
@@ -38,6 +38,7 @@ public class MedicalSerVice {
                 String choose = scan.nextLine();
                 if (choose.equals("yes") || choose.equals("Yes")) {
                     benhAnList.remove(benhAn);
+                    fileHelper.writeFileCSV(PATH,benhAnList,false);
                     return;
                 } else {
                     return;
@@ -45,9 +46,5 @@ public class MedicalSerVice {
             }
         }
         throw new NotFoundMedicalRecordException("Benh An Khong Tim Thay:");
-    }
-
-    private void listToCVS() throws IOException {
-        fileHelper.writeFileCSV(PATH, benhAnList, true);
     }
 }

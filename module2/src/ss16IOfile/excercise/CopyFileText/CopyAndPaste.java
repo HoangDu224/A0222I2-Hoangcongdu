@@ -28,8 +28,8 @@ public class CopyAndPaste {
             boolean append = false;
             boolean check = true;
             do {
-                System.out.println("1. Ghi de file");
-                System.out.println("2. Ghi tiep file");
+                System.out.println("1. Ghi de fileThi");
+                System.out.println("2. Ghi tiep fileThi");
                 int choose = Integer.parseInt(scan.nextLine());
                 switch (choose) {
                     case 1:

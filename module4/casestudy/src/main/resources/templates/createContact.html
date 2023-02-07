@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/contact/createContact}" method="post" th:object="${contact}">
+    <label>startDate</label><br>
+    <input th:field="*{startDate}" type="date"><br>
+    <label>endDate</label><br>
+    <input th:field="*{endDate}" type="date"><br>
+    <label>deposit</label><br>
+    <input th:field="*{deposit}" type="text"><br>
+    <span style="color: red" th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></span><br>
+    <label>totalMoney</label><br>
+    <input th:field="*{totalMoney}" type="text"><br>
+    <span style="color: red" th:if="${#fields.hasErrors('totalMoney')}" th:errors="*{totalMoney}"></span><br>
+    <label>Service</label><br>
+    <select th:field="*{services}">
+        <option selected="selected" value=""></option>
+        <option th:each="service ,iterStat: ${serviceList}" th:text="${service.serviceName}" th:value="${service.serviceId}"></option>
+    </select><br>
+    <label>Employee</label><br>
+    <select th:field="*{employee}">
+        <option selected="selected" value=""></option>
+        <option th:each="employee ,iterStat: ${employeeList}" th:text="${employee.name}" th:value="${employee.id}"></option>
+    </select><br>
+    <label>Customer</label><br>
+    <select th:field="*{customer}">
+        <option selected="selected" value="" ></option>
+        <option th:each="customer ,iterStat: ${customerList}" th:text="${customer.name}" th:value="${customer.id}"></option>
+    </select><br>
+    <button type="submit" >CREATE</button>
+    <button><a th:href="@{/contact}">CANCEL</a></button>
+</form>
+</body>
+</html>
