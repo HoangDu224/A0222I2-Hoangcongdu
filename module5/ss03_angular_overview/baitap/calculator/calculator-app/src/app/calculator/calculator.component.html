@@ -1,0 +1,11 @@
+<h1>Calculator</h1>
+<input type="text" #number1>
+<select #operator>
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<input type="text" #number2>
+<button class="btn btn-info" (click)="doCalculator(number1.value,number2.value,operator.value)">Ok~~!</button>
+<h3 >{{result}}</h3>

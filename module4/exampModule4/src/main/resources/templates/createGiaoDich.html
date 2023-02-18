@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/giaodich/createGiaoDich}" method="post" th:object="${giaoDich}">
+    <label>Ten Khach Hang</label><br>
+    <select th:field="*{customer}">
+        <option selected="selected" value=""></option>
+        <option th:each="customer ,iterStat: ${customerList}" th:text="${customer.name}" th:value="${customer.id}"></option>
+    </select><br>
+    <span style="color: red" th:if="${#fields.hasErrors('customer')}" th:errors="*{customer}"></span><br>
+    <label>Loai Bat Dong San</label><br>
+    <select th:field="*{service}">
+        <option selected="selected" value=""></option>
+        <option th:text="Dat" th:value="Dat" ></option>
+        <option th:text="NhaDat" th:value="NhaDat" ></option>
+    </select><br>
+    <span style="color: red" th:if="${#fields.hasErrors('service')}" th:errors="*{service}"></span><br>
+    <label>Ngay Giao Dich</label><br>
+    <input type="date" th:field="*{date}"><br>
+    <label>Don gia</label><br>
+    <input type="text" th:field="*{price}"><br>
+    <span style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span><br>
+    <label>Dien tich</label><br>
+    <input type="text" th:field="*{area}"><br>
+    <span style="color: red" th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></span><br>
+    <button type="submit" >CREATE</button>
+    <button><a th:href="@{/giaodich}">CANCEL</a></button>
+</form>
+</body>
+</html>
