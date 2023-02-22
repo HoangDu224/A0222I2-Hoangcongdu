@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
 
-  result: string ;
+  result: string;
 
   constructor() {
   }
@@ -15,11 +15,16 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  change(number1) {
+    this.result = number1;
+  }
+
   doCalculator(number1: string, number2: string, operator: string) {
     const firstOperator = parseInt(number1, 10);
     const secondOperator = parseInt(number2, 10);
-    if (operator === '/' && (firstOperator === 0 || secondOperator === 0)) {
+    if (operator === '/' && secondOperator === 0) {
       this.result = 'Khong the chia cho 0';
+      return;
     }
     switch (operator) {
       case '+': {
