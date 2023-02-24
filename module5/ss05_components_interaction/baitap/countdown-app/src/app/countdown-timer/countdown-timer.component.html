@@ -1,0 +1,5 @@
+<button (click)="doCount(true)">Start</button>
+<button (click)="doCount(false)">Stop</button>
+<button (click)="resetCount()">Reset</button>
+<p *ngIf="countNum!=0">{{countNum}}</p>
+<p *ngIf="countNum==0">Happy new year~~~!</p>
