@@ -1,0 +1,16 @@
+
+<hr>
+<div class="row container" style="margin: auto">
+<div *ngFor="let service of services" class="card col-4 container" style="width: 18rem; margin: fill">
+  <img src="{{service.img}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{service.name}}</h5>
+    <p class="card-text">Area: {{service.area}}</p>
+    <p class="card-text">Price: {{service.price}}</p>
+    <a href="#" class="btn btn-primary">Delete</a>
+    <a href="#" class="btn btn-primary">Edit</a>
+    <a href="#" class="btn btn-primary">More info</a>
+  </div>
+</div>
+</div>
+
