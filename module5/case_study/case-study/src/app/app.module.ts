@@ -12,6 +12,7 @@ import { ServiceCreateComponent } from './service/service-create/service-create.
 import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 import { ContactAppComponent } from './contact/contact-app/contact-app.component';
 import { ContactCreateComponent } from './contact/contact-create/contact-create.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContactCreateComponent } from './contact/contact-create/contact-create.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

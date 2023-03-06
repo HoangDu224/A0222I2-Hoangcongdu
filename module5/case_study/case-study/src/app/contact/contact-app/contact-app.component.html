@@ -1,1 +1,23 @@
-<p>contact-app works!</p>
+<h2>Contact Detail</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+  <tr>
+    <td>id</td>
+    <td>customer</td>
+    <td>service</td>
+    <td>startDate</td>
+    <td>endDate</td>
+    <td>money</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let contact of contacts">
+    <td>{{contact.id}}</td>
+    <td>{{contact.customer}}</td>
+    <td>{{contact.service}}</td>
+    <td>{{contact.startDate}}</td>
+    <td>{{contact.endDate}}</td>
+    <td>{{contact.money}}</td>
+  </tr>
+  </tbody>
+</table>

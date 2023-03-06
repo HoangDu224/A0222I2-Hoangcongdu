@@ -62,13 +62,13 @@ export class CustomerAppComponent implements OnInit {
   ]
   deleteCustomer = {
   id:0,
-  name: 'Nam',
-  birthday: '01/01/2000',
+  name: '',
+  birthday: '',
   gender: true,
-  idCard: '123123123',
-  phone: 123123,
-  email: 'mot@gmail.com',
-  address: 'mot mot'
+  idCard: '',
+  phone: 0,
+  email: '',
+  address: ''
 };
 
 
@@ -77,6 +77,7 @@ export class CustomerAppComponent implements OnInit {
   ngOnInit(): void {
   }
   doCreateCustomer(customer:any){
+    customer.gender = customer.gender === "true"
     this.customers.push(customer)
   }
   changeDeleteId(customer){
