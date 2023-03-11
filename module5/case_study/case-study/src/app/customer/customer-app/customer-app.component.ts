@@ -90,8 +90,6 @@ export class CustomerAppComponent implements OnInit {
   }
   removeCustomer(arr : Array<Customer> , customer : Customer) {
     for (let i = 0; i < arr.length; i++) {
-      console.log(arr[i].id)
-      console.log(customer.id)
       if (arr[i].id === customer.id) {
         arr.splice(i, 1)
         break;
