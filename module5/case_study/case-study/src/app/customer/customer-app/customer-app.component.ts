@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Customer} from "../../model/customer";
+import {CustomerService} from "../../service/customerService/customer.service";
+import {FacilityService} from "../../service/facility/facility.service";
+import {Router} from "@angular/router";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-customer-app',
@@ -7,93 +11,35 @@ import {Customer} from "../../model/customer";
   styleUrls: ['./customer-app.component.css']
 })
 export class CustomerAppComponent implements OnInit {
-  customers : Customer [] = [
-    {
-    id:1,
-    name: 'Mot',
-    birthday: '01/01/2000',
-    gender: false,
-    idCard: '123123123',
-    phone: 123123,
-    email: 'mot@gmail.com',
-    address: 'mot mot',
-      type: 'Diamond'
-  },
-    {
-      id:2,
-      name: 'Hai',
-      birthday: '01/01/2000',
-      gender: true,
-      idCard: '123123123',
-      phone: 123123,
-      email: 'mot@gmail.com',
-      address: 'mot mot'
-    },
-    {
-      id:3,
-      name: 'Ba',
-      birthday: '01/01/2000',
-      gender: true,
-      idCard: '123123123',
-      phone: 123123,
-      email: 'mot@gmail.com',
-      address: 'mot mot'
-    },
-    {
-      id:4,
-      name: 'Bon',
-      birthday: '01/01/2000',
-      gender: true,
-      idCard: '123123123',
-      phone: 123123,
-      email: 'mot@gmail.com',
-      address: 'mot mot'
-    },
-    {
-      id:5,
-      name: 'Nam',
-      birthday: '01/01/2000',
-      gender: true,
-      idCard: '123123123',
-      phone: 123123,
-      email: 'mot@gmail.com',
-      address: 'mot mot'
-    },
-  ]
-  deleteCustomer = {
-  id:0,
-  name: '',
-  birthday: '',
-  gender: true,
-  idCard: '',
-  phone: 0,
-  email: '',
-  address: ''
-};
+  customers: Customer [] = []
+  deleteCustomerId = 0;
 
 
-  constructor() { }
+  constructor(private customerService: CustomerService, private router: Router, private toast: ToastrService) {
+    this.customerService.getAll().subscribe(next => {
+      this.customers = next;
+    })
+  }
 
   ngOnInit(): void {
-  }
-  doCreateCustomer(customer:any){
-    customer.gender = customer.gender === "true"
-    this.customers.push(customer)
-  }
-  changeDeleteId(customer){
-    this.deleteCustomer = customer;
+    this.getAll();
   }
 
-  doDelete(deleteCustomer: Customer) {
-    this.removeCustomer(this.customers,deleteCustomer)
-    console.log(this.customers)
+  getAll() {
+    this.customerService.getAll().subscribe(next => {
+      this.customers = next;
+    })
   }
-  removeCustomer(arr : Array<Customer> , customer : Customer) {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].id === customer.id) {
-        arr.splice(i, 1)
-        break;
-      }
-    }
+
+  changeDeleteId(customer) {
+    this.deleteCustomerId = customer;
   }
+
+  doDelete(deleteCustomerId: number) {
+    this.customerService.deleteCustomer(deleteCustomerId).subscribe(next => {
+      this.toast.success('Delete Customer thành công');
+      this.getAll();
+    })
+  }
+
 }

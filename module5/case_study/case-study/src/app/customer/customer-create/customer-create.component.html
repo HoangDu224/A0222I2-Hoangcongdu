@@ -1,5 +1,5 @@
 <h2>Create Customer</h2>
-<form [formGroup]="customerForm" (ngSubmit)="createCustomerWithReactive()">
+<form [formGroup]="customerForm" (ngSubmit)="addCustomer()">
   <div class="mb-3">
     <label class="form-label">id</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -19,8 +19,8 @@
   </div>
   <div class="mb-3">
     <label class="form-label">Gender</label><br>
-    <input type="radio" value= true name="gender" formControlName="gender">Nam
-    <input type="radio" value= false name="gender" formControlName="gender">Nu
+    <input type="radio" [value]="true" name="gender" formControlName="gender">Nam
+    <input type="radio" [value]="false" name="gender" formControlName="gender">Nu
   </div>
   <div class="mb-3">
     <label class="form-label">idCard</label>
@@ -32,7 +32,7 @@
     <label class="form-label">Phone</label>
     <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="phone" name="phone">
     <p style="color: red" *ngIf="customerForm.controls.phone.hasError('required') && customerForm.controls.phone.touched">Phone Không Được để trống</p>
-    <p style="color: red" *ngIf="customerForm.controls.phone.hasError('pattern') && customerForm.controls.phone.touched">Phone Sai Pattern +84-xxxxxxxxx</p>
+<!--    <p style="color: red" *ngIf="customerForm.controls.phone.hasError('pattern') && customerForm.controls.phone.touched">Phone Sai Pattern +84-xxxxxxxxx</p>-->
   </div>
   <div class="mb-3">
     <label class="form-label">email</label>
@@ -46,7 +46,12 @@
   </div>
   <div class="mb-3">
     <label class="form-label">type</label>
-    <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="type" name="type">
+    <select formControlName="type" name="type">
+      <option class="form-control" *ngFor="let item of typeCustomer" [ngValue]="item">{{item.name}}</option>
+    </select>
+    <p style="color: red"
+       *ngIf="customerForm.controls.type.hasError('required') && customerForm.controls.type.touched">Type Không
+      Được để trống</p>
   </div>
   <button type="submit" class="btn btn-primary" [disabled]="!customerForm.valid">Submit</button>
 </form>
