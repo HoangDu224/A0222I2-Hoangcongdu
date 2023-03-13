@@ -13,6 +13,7 @@ import {ToastrService} from "ngx-toastr";
 export class CustomerAppComponent implements OnInit {
   customers: Customer [] = []
   deleteCustomerId = 0;
+  check = true;
 
 
   constructor(private customerService: CustomerService, private router: Router, private toast: ToastrService) {
@@ -42,4 +43,37 @@ export class CustomerAppComponent implements OnInit {
     })
   }
 
+  search(key: any, field: string) {
+    if (key === null) {
+      return this.router.navigateByUrl('customer/list')
+    }
+    switch (field) {
+      case 'id':
+        this.customerService.searchCustomerById(key).subscribe(next => {
+          this.customers = next
+        })
+        break;
+      case 'name':
+        this.customerService.searchCustomerByName(key).subscribe(next => {
+          this.customers = next
+        })
+        break;
+    }
+
+  }
+
+  sortById() {
+    if (this.check === true) {
+      this.customerService.sortCustomerByIdAsc().subscribe(next => {
+        this.customers = next
+      })
+      this.check = false
+    } else if (this.check === false)
+    {
+      this.customerService.sortCustomerByIdDsc().subscribe(next => {
+        this.customers = next
+      })
+      this.check = true;
+    }
+  }
 }

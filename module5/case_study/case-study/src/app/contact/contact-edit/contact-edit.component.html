@@ -1,0 +1,36 @@
+<h2>Contact Edit</h2>
+<hr>
+<form [formGroup]="contactForm" (ngSubmit)="editContact()">
+  <div class="mb-3">
+    <label class="form-label">id</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+           formControlName="id" name="id" [ngModel]="contact.id" disabled>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">customer</label>
+    <select formControlName="customer" name="customer" [ngModel]="contact.customer" >
+      <option [ngValue]="contact.customer" >{{contact.customer.name}}</option>
+      <option *ngFor="let customer of customers" [ngValue]="customer">{{customer.name}}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">service</label>
+    <select formControlName="service" name="service" [ngModel]="contact.service">
+      <option [ngValue]="contact.service" >{{contact.service.name}}</option>
+      <option *ngFor="let service of facilitys" [ngValue]="service" >{{service.name}}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">startDate</label>
+    <input type="date" class="form-control" formControlName="startDate" name="startDate" [ngModel]="contact.startDate">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">endDate</label>
+    <input type="date" class="form-control" formControlName="endDate" name="endDate" [ngModel]="contact.endDate">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">money</label>
+    <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="money" name="money" [ngModel]="contact.money">
+  </div>
+  <button type="submit"> Create contact</button>
+</form>

@@ -17,6 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
+import { ContactEditComponent } from './contact/contact-edit/contact-edit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {ToastrModule} from "ngx-toastr";
     ContactCreateComponent,
     FacilityListComponent,
     FacilityCreateComponent,
-    FacilityEditComponent
+    FacilityEditComponent,
+    ContactEditComponent
   ],
   imports: [
     BrowserModule,

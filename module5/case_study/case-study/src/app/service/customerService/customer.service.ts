@@ -31,4 +31,20 @@ export class CustomerService {
   getCustomerById(id: any): Observable<Customer> {
     return this.httpClient.get<Customer>('http://localhost:3000/customers/' + id)
   }
+
+  searchCustomerById(id: any): Observable<Customer[]> {
+    return this.httpClient.get<Customer[]>('http://localhost:3000/customers?id_like=' + id)
+  }
+
+  searchCustomerByName(name: any): Observable<Customer[]> {
+    return this.httpClient.get<Customer[]>('http://localhost:3000/customers?name_like=' + name)
+  }
+
+  sortCustomerByIdAsc(): Observable<Customer[]>{
+    return this.httpClient.get<Customer[]>('http://localhost:3000/customers?_sort=id&_order=asc')
+  }
+
+  sortCustomerByIdDsc(): Observable<Customer[]>{
+    return this.httpClient.get<Customer[]>('http://localhost:3000/customers?_sort=id&_order=desc')
+  }
 }

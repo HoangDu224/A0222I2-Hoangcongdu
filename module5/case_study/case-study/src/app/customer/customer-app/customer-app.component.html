@@ -1,10 +1,18 @@
 <h4>Customer</h4>
 <hr>
 <button class="btn btn-warning" [routerLink]="['/customer/create']" >Create</button>
+<div>
+  <input placeholder="search" #searchValue (keyup)="search(searchValue.value,field.value)">
+  <select name="field" id="field" #field>
+    <option value="id">Id</option>
+    <option value="name">Name</option>
+  </select>
+  <button (click)="search(searchValue.value,field.value)">Search</button>
+</div>
 <table class="table table-striped">
   <thead class="table-dark">
   <tr>
-    <td>id</td>
+    <td ><button (click)="sortById()">id</button></td>
     <td>name</td>
     <td>birthday</td>
     <td>gender</td>
